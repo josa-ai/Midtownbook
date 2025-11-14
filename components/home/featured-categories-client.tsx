@@ -91,7 +91,7 @@ export function FeaturedCategoriesClient({ categories }: FeaturedCategoriesClien
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-body-lg text-muted-foreground"
           >
-            Browse businesses by category and discover what Midtown has to offer
+            Whether you're visiting Bonnet Springs or live in the neighborhood, discover Mid-Town's diverse businesses
           </motion.p>
         </div>
 

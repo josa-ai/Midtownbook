@@ -59,7 +59,7 @@ export function FeaturedBusinessesClient({ businesses }: FeaturedBusinessesClien
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-body-lg text-muted-foreground"
           >
-            Discover the best businesses in Midtown, handpicked just for you
+            Meet the local entrepreneurs who chose Mid-Town for its revival
           </motion.p>
         </div>
 

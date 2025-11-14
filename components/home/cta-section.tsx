@@ -8,11 +8,11 @@ import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 
 const benefits = [
-  'Reach thousands of local customers',
-  'Build your online presence',
-  'Get verified reviews and ratings',
-  'Promote your events and deals',
-  'Grow your business with analytics',
+  'Show your park receipt or Tigers ticket for exclusive discounts',
+  'Find the perfect pre-game spot or post-park celebration',
+  'Browse unique shops and boutiques on Memorial Boulevard',
+  'Enjoy walkable streets connecting attractions to local businesses',
+  'Discover why Mid-Town is Lakeland\'s most exciting district',
 ];
 
 export function CtaSection() {
@@ -34,11 +34,10 @@ export function CtaSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-display-md lg:text-display-lg font-serif font-bold mb-6">
-              Grow Your Business with Midtown Book
+              Make the Most of Your Visit
             </h2>
             <p className="text-body-lg text-white/90 mb-8">
-              Join over 1,000 local businesses already thriving on Midtown Book.
-              Connect with your community and grow your customer base today.
+              Thousands visit Bonnet Springs Park and Tigers games every year. Here's how local businesses make your Mid-Town adventure unforgettable.
             </p>
 
             {/* Benefits List */}
@@ -72,8 +71,8 @@ export function CtaSection() {
                 asChild
                 className="shadow-xl hover:shadow-2xl"
               >
-                <Link href="/businesses/new">
-                  Add Your Business
+                <Link href="/deals">
+                  See All Deals & Offers
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -83,7 +82,7 @@ export function CtaSection() {
                 asChild
                 className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               >
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/events">Browse Events</Link>
               </Button>
             </motion.div>
           </motion.div>

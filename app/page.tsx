@@ -1,4 +1,4 @@
-import { Hero, FeaturedCategories, FeaturedBusinesses, CtaSection } from '@/components/home';
+import { Hero, AnchorAttractionsSection, FeaturedCategories, FeaturedBusinesses, CtaSection } from '@/components/home';
 import { Header, Footer } from '@/components/layout';
 
 export default function HomePage() {
@@ -7,6 +7,7 @@ export default function HomePage() {
       <Header />
       <main className="min-h-screen">
         <Hero />
+        <AnchorAttractionsSection />
         <FeaturedCategories />
         <FeaturedBusinesses />
         <CtaSection />

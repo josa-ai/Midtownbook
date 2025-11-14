@@ -61,15 +61,14 @@ export function Footer() {
                 </span>
               </Link>
               <p className="text-body-sm text-muted-foreground mb-6 max-w-sm">
-                Your trusted community business directory. Discover, connect, and support
-                local businesses in Midtown.
+                Your guide to Mid-Town Lakeland - where America's #1 City Park meets local charm. Discover businesses, events, and experiences in Lakeland's most exciting district.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-body-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span>Midtown Community</span>
+                  <span>Mid-Town Lakeland, Florida</span>
                 </div>
                 <div className="flex items-center space-x-2 text-body-sm text-muted-foreground">
                   <Mail className="h-4 w-4 flex-shrink-0" />
@@ -188,8 +187,7 @@ export function Footer() {
                   Stay Connected
                 </h3>
                 <p className="text-body-md text-white/90 mb-6">
-                  Get the latest updates on new businesses, events, and exclusive deals
-                  delivered to your inbox.
+                  Get insider access to park events, Tigers game day specials, and exclusive deals from Mid-Town businesses delivered to your inbox.
                 </p>
                 <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                   <Input
@@ -221,7 +219,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Midtown Book. All rights reserved.
             </p>
             <p className="text-body-sm text-muted-foreground text-center md:text-right">
-              Made with ❤️ for the Midtown Community
+              Made with ❤️ for Mid-Town Lakeland
             </p>
           </div>
         </div>
