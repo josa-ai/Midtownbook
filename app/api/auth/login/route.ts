@@ -20,10 +20,9 @@ export async function POST(request: NextRequest) {
     let response = NextResponse.json({ success: true });
 
     // Create Supabase client with proper cookie handling for route handlers
-    // Using hardcoded credentials to avoid webpack caching issues
     const supabase = createServerClient(
-      'https://bwpvhwvgsebthapztiyp.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3cHZod3Znc2VidGhhcHp0aXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwNjA1NTEsImV4cCI6MjA3ODYzNjU1MX0.1Uj2T3uLGlrnja2yTZftJ4CNAvYZPIhBxGvRQDMX0SE',
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
       {
         cookies: {
           getAll() {
