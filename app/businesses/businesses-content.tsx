@@ -9,111 +9,165 @@ import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Skeleton } from '@/components/ui/skeleton';
+import { BusinessWithDetails } from '@/lib/data/businesses';
+import { CategoryWithCount } from '@/lib/data/categories';
 
-// Mock data - replace with actual data fetching
-const mockBusinesses = [
-  {
-    id: '1',
-    slug: 'sunrise-cafe',
-    name: 'Sunrise Café',
-    description: 'Cozy neighborhood café serving fresh pastries and artisan coffee',
-    category: 'Restaurant',
-    address: '123 Main St, Midtown',
-    coverImageUrl: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800',
-    logoUrl: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=200',
-    rating: 4.5,
-    reviewCount: 127,
-    isOpen: true,
-    isFeatured: true,
-    isVerified: true,
-  },
-  {
-    id: '2',
-    slug: 'tech-repair-pro',
-    name: 'Tech Repair Pro',
-    description: 'Expert electronics repair and IT services',
-    category: 'Services',
-    address: '456 Oak Ave, Midtown',
-    coverImageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800',
-    rating: 4.8,
-    reviewCount: 89,
-    isOpen: true,
-    isVerified: true,
-  },
-  {
-    id: '3',
-    slug: 'style-studio',
-    name: 'Style Studio',
-    description: 'Modern hair salon and beauty services',
-    category: 'Beauty',
-    address: '789 Elm St, Midtown',
-    coverImageUrl: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
-    rating: 4.6,
-    reviewCount: 203,
-    isOpen: false,
-    isVerified: true,
-  },
-];
+interface BusinessesContentProps {
+  initialBusinesses: BusinessWithDetails[];
+  initialCategories: CategoryWithCount[];
+  initialTotal: number;
+}
 
-const filterGroups: FilterGroup[] = [
-  {
-    id: 'category',
-    label: 'Category',
-    type: 'checkbox',
-    options: [
-      { id: 'restaurant', label: 'Restaurants', count: 45 },
-      { id: 'services', label: 'Services', count: 32 },
-      { id: 'beauty', label: 'Beauty & Wellness', count: 28 },
-      { id: 'retail', label: 'Retail', count: 56 },
-      { id: 'entertainment', label: 'Entertainment', count: 19 },
-    ],
-  },
-  {
-    id: 'rating',
-    label: 'Rating',
-    type: 'checkbox',
-    options: [
-      { id: '5', label: '5 stars', count: 12 },
-      { id: '4', label: '4+ stars', count: 48 },
-      { id: '3', label: '3+ stars', count: 89 },
-    ],
-  },
-  {
-    id: 'features',
-    label: 'Features',
-    type: 'checkbox',
-    options: [
-      { id: 'verified', label: 'Verified', count: 67 },
-      { id: 'featured', label: 'Featured', count: 23 },
-      { id: 'open_now', label: 'Open Now', count: 45 },
-    ],
-  },
-];
-
-export function BusinessesContent() {
+export function BusinessesContent({
+  initialBusinesses,
+  initialCategories,
+  initialTotal,
+}: BusinessesContentProps) {
+  const [businesses, setBusinesses] = React.useState<BusinessWithDetails[]>(initialBusinesses);
+  const [categories] = React.useState<CategoryWithCount[]>(initialCategories);
+  const [total, setTotal] = React.useState(initialTotal);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedFilters, setSelectedFilters] = React.useState<Record<string, string[]>>({});
   const [viewMode, setViewMode] = React.useState<'grid' | 'list'>('grid');
   const [isLoading, setIsLoading] = React.useState(false);
+  const [sortBy, setSortBy] = React.useState<'name' | 'rating' | 'created_at' | 'view_count'>('created_at');
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const itemsPerPage = 12;
+
+  const fetchBusinesses = React.useCallback(async () => {
+    setIsLoading(true);
+    try {
+      // Build query params
+      const params = new URLSearchParams({
+        sortBy,
+        sortOrder: 'desc',
+        limit: itemsPerPage.toString(),
+        offset: ((currentPage - 1) * itemsPerPage).toString(),
+      });
+
+      if (searchQuery) {
+        params.set('search', searchQuery);
+      }
+
+      // Apply category filter
+      if (selectedFilters.category?.length > 0) {
+        params.set('category', selectedFilters.category[0]);
+      }
+
+      // Apply rating filter
+      if (selectedFilters.rating?.length > 0) {
+        const minRating = Math.min(...selectedFilters.rating.map(Number));
+        params.set('rating', minRating.toString());
+      }
+
+      // Apply price range filter
+      if (selectedFilters.price_range?.length > 0) {
+        params.set('priceRange', selectedFilters.price_range.join(','));
+      }
+
+      // Apply featured filter
+      if (selectedFilters.features?.includes('featured')) {
+        params.set('isFeatured', 'true');
+      }
+
+      // Fetch from API route
+      const response = await fetch(`/api/businesses?${params.toString()}`);
+      if (!response.ok) throw new Error('Failed to fetch businesses');
+
+      const result = await response.json();
+      setBusinesses(result.businesses);
+      setTotal(result.total);
+    } catch (error) {
+      console.error('Error fetching businesses:', error);
+      setBusinesses([]);
+      setTotal(0);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [searchQuery, selectedFilters, sortBy, currentPage]);
+
+  // Fetch businesses when filters or search change
+  React.useEffect(() => {
+    fetchBusinesses();
+  }, [fetchBusinesses]);
+
+  // Build filter groups from categories
+  const filterGroups: FilterGroup[] = React.useMemo(() => {
+    const groups: FilterGroup[] = [];
+
+    // Category filter
+    if (categories.length > 0) {
+      groups.push({
+        id: 'category',
+        label: 'Category',
+        type: 'radio',
+        options: categories.map((cat) => ({
+          id: cat.id,
+          label: cat.name,
+          count: cat.business_count,
+        })),
+      });
+    }
+
+    // Rating filter
+    groups.push({
+      id: 'rating',
+      label: 'Minimum Rating',
+      type: 'radio',
+      options: [
+        { id: '4', label: '4+ stars' },
+        { id: '3', label: '3+ stars' },
+        { id: '2', label: '2+ stars' },
+      ],
+    });
+
+    // Price range filter
+    groups.push({
+      id: 'price_range',
+      label: 'Price Range',
+      type: 'checkbox',
+      options: [
+        { id: '1', label: '$' },
+        { id: '2', label: '$$' },
+        { id: '3', label: '$$$' },
+        { id: '4', label: '$$$$' },
+      ],
+    });
+
+    // Features filter
+    groups.push({
+      id: 'features',
+      label: 'Features',
+      type: 'checkbox',
+      options: [
+        { id: 'verified', label: 'Verified' },
+        { id: 'featured', label: 'Featured' },
+      ],
+    });
+
+    return groups;
+  }, [categories]);
 
   const handleFilterChange = (groupId: string, values: string[]) => {
     setSelectedFilters((prev) => ({
       ...prev,
       [groupId]: values,
     }));
+    setCurrentPage(1); // Reset to first page when filters change
   };
 
   const handleClearAll = () => {
     setSelectedFilters({});
+    setSearchQuery('');
+    setCurrentPage(1);
   };
 
-  const filteredBusinesses = mockBusinesses.filter((business) => {
-    // Search filter
-    if (searchQuery && !business.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false;
-    }
-    return true;
-  });
+  const handleSearch = (value: string) => {
+    setSearchQuery(value);
+    setCurrentPage(1);
+  };
+
+  const totalPages = Math.ceil(total / itemsPerPage);
 
   return (
     <div>
@@ -123,7 +177,7 @@ export function BusinessesContent() {
           Browse Businesses
         </h1>
         <p className="text-body-lg text-muted-foreground">
-          Discover {mockBusinesses.length} local businesses in Midtown
+          Discover {total} local businesses in Midtown
         </p>
       </div>
 
@@ -135,7 +189,7 @@ export function BusinessesContent() {
             type="search"
             placeholder="Search businesses..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => handleSearch(e.target.value)}
             className="pl-10"
           />
         </div>
@@ -177,6 +231,41 @@ export function BusinessesContent() {
         </div>
       </div>
 
+      {/* Sort Options */}
+      <div className="mb-6 flex items-center gap-4">
+        <span className="text-body-sm text-muted-foreground">Sort by:</span>
+        <div className="flex gap-2">
+          <Button
+            variant={sortBy === 'created_at' ? 'primary' : 'ghost'}
+            size="sm"
+            onClick={() => setSortBy('created_at')}
+          >
+            Newest
+          </Button>
+          <Button
+            variant={sortBy === 'rating' ? 'primary' : 'ghost'}
+            size="sm"
+            onClick={() => setSortBy('rating')}
+          >
+            Rating
+          </Button>
+          <Button
+            variant={sortBy === 'name' ? 'primary' : 'ghost'}
+            size="sm"
+            onClick={() => setSortBy('name')}
+          >
+            Name
+          </Button>
+          <Button
+            variant={sortBy === 'view_count' ? 'primary' : 'ghost'}
+            size="sm"
+            onClick={() => setSortBy('view_count')}
+          >
+            Popular
+          </Button>
+        </div>
+      </div>
+
       {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Sidebar - Desktop Only */}
@@ -200,7 +289,7 @@ export function BusinessesContent() {
                 <Skeleton key={i} className="h-48 rounded-lg" />
               ))}
             </div>
-          ) : filteredBusinesses.length === 0 ? (
+          ) : businesses.length === 0 ? (
             <EmptyState
               icon={Search}
               title="No businesses found"
@@ -211,22 +300,63 @@ export function BusinessesContent() {
               }}
             />
           ) : (
-            <div
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'
-                  : 'space-y-4'
-              }
-            >
-              {filteredBusinesses.map((business) => (
-                <BusinessCard
-                  key={business.id}
-                  business={business}
-                  variant={viewMode === 'grid' ? 'grid' : 'list'}
-                  showActions
-                />
-              ))}
-            </div>
+            <>
+              <div
+                className={
+                  viewMode === 'grid'
+                    ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'
+                    : 'space-y-4'
+                }
+              >
+                {businesses.map((business) => (
+                  <BusinessCard
+                    key={business.id}
+                    business={{
+                      id: business.id,
+                      slug: business.slug,
+                      name: business.name,
+                      description: business.description || undefined,
+                      category: business.category.name,
+                      logoUrl: business.logo_url || undefined,
+                      coverImageUrl: business.cover_image_url || undefined,
+                      rating: business.average_rating || undefined,
+                      reviewCount: business.review_count,
+                      address: `${business.address}, ${business.city}`,
+                      phone: business.phone || undefined,
+                      priceRange: business.price_range || undefined,
+                      isFeatured: business.is_featured,
+                    }}
+                    variant={viewMode === 'grid' ? 'grid' : 'list'}
+                    showActions
+                  />
+                ))}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="mt-8 flex items-center justify-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    disabled={currentPage === 1 || isLoading}
+                  >
+                    Previous
+                  </Button>
+                  <span className="text-body-sm text-muted-foreground px-4">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages || isLoading}
+                  >
+                    Next
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

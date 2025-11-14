@@ -3,20 +3,32 @@ import { Metadata } from 'next';
 import { Header, Footer } from '@/components/layout';
 import { Container } from '@/components/ui/container';
 import { BusinessesContent } from './businesses-content';
+import { getBusinesses } from '@/lib/data/businesses';
+import { getCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
   title: 'Browse Businesses',
   description: 'Discover local businesses in Midtown. Search, filter, and find the perfect business for your needs.',
 };
 
-export default function BusinessesPage() {
+export default async function BusinessesPage() {
+  // Fetch initial data server-side
+  const [businessesData, categories] = await Promise.all([
+    getBusinesses({ limit: 12, offset: 0, sortBy: 'created_at', sortOrder: 'desc' }),
+    getCategories(),
+  ]);
+
   return (
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50 py-8">
         <Container size="xl">
           <Suspense fallback={<BusinessesLoadingSkeleton />}>
-            <BusinessesContent />
+            <BusinessesContent
+              initialBusinesses={businessesData.businesses}
+              initialCategories={categories}
+              initialTotal={businessesData.total}
+            />
           </Suspense>
         </Container>
       </main>
