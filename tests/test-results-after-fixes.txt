@@ -1,0 +1,1006 @@
+
+> midtownbook@0.1.0 test:design
+> playwright test tests/design-system.spec.js
+
+
+Running 411 tests using 1 worker
+
+⚠️  Found 7 8-point grid violations on /
+[
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓    1 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: / › validates 8-point grid spacing (1.0s)
+⚠️  4 body line-height issues on /
+  ✓    2 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: / › validates line height ratios (839ms)
+  ✓    3 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: / › validates letter spacing standards (795ms)
+  ✓    4 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: / › validates text line length (50-75 characters) (796ms)
+  ✓    5 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: / › validates visual hierarchy (automated squint test) (764ms)
+⚠️  Found 6 potential contrast issues on /
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓    6 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: / › validates color contrast for readability (765ms)
+  ✓    7 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: / › validates consistent section spacing (794ms)
+⚠️  3 button padding issues on /
+  ✓    8 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: / › validates CTAs are clearly visible (777ms)
+  ✓    9 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: / › validates responsive typography on mobile (779ms)
+  ✓   10 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: / › validates subtle shadows on cards (763ms)
+  ✓   11 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /businesses › validates 8-point grid spacing (1.6s)
+  ✓   12 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /businesses › validates line height ratios (1.0s)
+  ✓   13 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /businesses › validates letter spacing standards (1.0s)
+  ✓   14 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /businesses › validates text line length (50-75 characters) (1.0s)
+  ✓   15 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /businesses › validates visual hierarchy (automated squint test) (1.0s)
+⚠️  Found 5 potential contrast issues on /businesses
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   16 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /businesses › validates color contrast for readability (1.0s)
+  ✓   17 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /businesses › validates consistent section spacing (1.0s)
+⚠️  7 button padding issues on /businesses
+  ✓   18 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /businesses › validates CTAs are clearly visible (1.1s)
+  ✓   19 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /businesses › validates responsive typography on mobile (1.0s)
+  ✓   20 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /businesses › validates subtle shadows on cards (997ms)
+  ✓   21 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates 8-point grid spacing (1.4s)
+  ✓   22 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates line height ratios (1.0s)
+  ✓   23 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates letter spacing standards (996ms)
+  ✓   24 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates text line length (50-75 characters) (984ms)
+  ✓   25 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates visual hierarchy (automated squint test) (977ms)
+⚠️  Found 5 potential contrast issues on /businesses/sunrise-cafe
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   26 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates color contrast for readability (965ms)
+  ✓   27 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates consistent section spacing (963ms)
+⚠️  7 button padding issues on /businesses/sunrise-cafe
+  ✓   28 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates CTAs are clearly visible (1.0s)
+  ✓   29 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates responsive typography on mobile (995ms)
+  ✓   30 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /businesses/sunrise-cafe › validates subtle shadows on cards (988ms)
+⚠️  Found 2 8-point grid violations on /businesses/create
+[
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓   31 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /businesses/create › validates 8-point grid spacing (1.0s)
+⚠️  2 header line-height issues on /businesses/create
+  ✓   32 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /businesses/create › validates line height ratios (762ms)
+  ✓   33 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /businesses/create › validates letter spacing standards (760ms)
+⚠️  Paragraph width 808px exceeds 800px on /businesses/create
+⚠️  Paragraph width 808px exceeds 800px on /businesses/create
+  ✓   34 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /businesses/create › validates text line length (50-75 characters) (745ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /businesses/create
+  ✓   35 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /businesses/create › validates visual hierarchy (automated squint test) (722ms)
+⚠️  Found 4 potential contrast issues on /businesses/create
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   36 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /businesses/create › validates color contrast for readability (724ms)
+  ✓   37 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /businesses/create › validates consistent section spacing (727ms)
+⚠️  4 button padding issues on /businesses/create
+  ✓   38 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /businesses/create › validates CTAs are clearly visible (757ms)
+  ✓   39 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /businesses/create › validates responsive typography on mobile (770ms)
+  ✓   40 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /businesses/create › validates subtle shadows on cards (747ms)
+  ✓   41 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates 8-point grid spacing (1.0s)
+  ✓   42 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates line height ratios (784ms)
+  ✓   43 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates letter spacing standards (792ms)
+⚠️  Paragraph width 808px exceeds 800px on /businesses/sunrise-cafe/claim
+  ✓   44 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates text line length (50-75 characters) (962ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /businesses/sunrise-cafe/claim
+  ✓   45 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates visual hierarchy (automated squint test) (755ms)
+⚠️  Found 4 potential contrast issues on /businesses/sunrise-cafe/claim
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   46 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates color contrast for readability (764ms)
+  ✓   47 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates consistent section spacing (753ms)
+⚠️  3 button padding issues on /businesses/sunrise-cafe/claim
+  ✓   48 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates CTAs are clearly visible (763ms)
+  ✓   49 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates responsive typography on mobile (762ms)
+  ✓   50 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim › validates subtle shadows on cards (748ms)
+⚠️  Found 8 8-point grid violations on /businesses/sunrise-cafe/claim/success
+[
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓   51 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates 8-point grid spacing (1.0s)
+⚠️  4 header line-height issues on /businesses/sunrise-cafe/claim/success
+  ✓   52 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates line height ratios (804ms)
+  ✓   53 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates letter spacing standards (768ms)
+  ✓   54 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates text line length (50-75 characters) (781ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /businesses/sunrise-cafe/claim/success
+  ✓   55 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates visual hierarchy (automated squint test) (772ms)
+⚠️  Found 6 potential contrast issues on /businesses/sunrise-cafe/claim/success
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   56 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates color contrast for readability (752ms)
+  ✓   57 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates consistent section spacing (747ms)
+⚠️  3 button padding issues on /businesses/sunrise-cafe/claim/success
+  ✓   58 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates CTAs are clearly visible (780ms)
+  ✓   59 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates responsive typography on mobile (791ms)
+  ✓   60 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /businesses/sunrise-cafe/claim/success › validates subtle shadows on cards (761ms)
+  ✓   61 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /categories › validates 8-point grid spacing (2.1s)
+  ✓   62 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /categories › validates line height ratios (1.8s)
+  ✓   63 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /categories › validates letter spacing standards (1.7s)
+  ✓   64 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /categories › validates text line length (50-75 characters) (1.8s)
+  ✓   65 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /categories › validates visual hierarchy (automated squint test) (1.8s)
+⚠️  Found 5 potential contrast issues on /categories
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   66 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /categories › validates color contrast for readability (1.8s)
+  ✓   67 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /categories › validates consistent section spacing (1.8s)
+⚠️  7 button padding issues on /categories
+  ✓   68 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /categories › validates CTAs are clearly visible (1.8s)
+  ✓   69 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /categories › validates responsive typography on mobile (1.8s)
+  ✓   70 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /categories › validates subtle shadows on cards (1.8s)
+  ✓   71 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /categories/restaurants › validates 8-point grid spacing (1.6s)
+  ✓   72 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /categories/restaurants › validates line height ratios (1.4s)
+  ✓   73 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /categories/restaurants › validates letter spacing standards (1.4s)
+  ✓   74 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /categories/restaurants › validates text line length (50-75 characters) (1.4s)
+  ✓   75 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /categories/restaurants › validates visual hierarchy (automated squint test) (1.3s)
+⚠️  Found 5 potential contrast issues on /categories/restaurants
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   76 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /categories/restaurants › validates color contrast for readability (1.3s)
+  ✓   77 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /categories/restaurants › validates consistent section spacing (1.3s)
+⚠️  7 button padding issues on /categories/restaurants
+  ✓   78 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /categories/restaurants › validates CTAs are clearly visible (1.4s)
+  ✓   79 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /categories/restaurants › validates responsive typography on mobile (1.3s)
+  ✓   80 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /categories/restaurants › validates subtle shadows on cards (1.3s)
+  ✓   81 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /events › validates 8-point grid spacing (1.6s)
+  ✓   82 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /events › validates line height ratios (1.3s)
+  ✓   83 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /events › validates letter spacing standards (1.3s)
+  ✓   84 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /events › validates text line length (50-75 characters) (1.3s)
+  ✓   85 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /events › validates visual hierarchy (automated squint test) (1.3s)
+⚠️  Found 5 potential contrast issues on /events
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   86 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /events › validates color contrast for readability (1.3s)
+  ✓   87 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /events › validates consistent section spacing (1.3s)
+⚠️  7 button padding issues on /events
+  ✓   88 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /events › validates CTAs are clearly visible (1.3s)
+  ✓   89 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /events › validates responsive typography on mobile (1.3s)
+  ✓   90 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /events › validates subtle shadows on cards (1.3s)
+  ✓   91 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /events/summer-food-festival › validates 8-point grid spacing (1.6s)
+  ✓   92 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /events/summer-food-festival › validates line height ratios (1.3s)
+  ✓   93 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /events/summer-food-festival › validates letter spacing standards (1.2s)
+  ✓   94 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /events/summer-food-festival › validates text line length (50-75 characters) (1.3s)
+  ✓   95 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /events/summer-food-festival › validates visual hierarchy (automated squint test) (1.2s)
+⚠️  Found 5 potential contrast issues on /events/summer-food-festival
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓   96 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /events/summer-food-festival › validates color contrast for readability (1.2s)
+  ✓   97 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /events/summer-food-festival › validates consistent section spacing (1.2s)
+⚠️  7 button padding issues on /events/summer-food-festival
+  ✓   98 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /events/summer-food-festival › validates CTAs are clearly visible (1.2s)
+  ✓   99 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /events/summer-food-festival › validates responsive typography on mobile (1.2s)
+  ✓  100 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /events/summer-food-festival › validates subtle shadows on cards (1.2s)
+  ✓  101 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /deals › validates 8-point grid spacing (1.6s)
+  ✓  102 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /deals › validates line height ratios (1.3s)
+  ✓  103 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /deals › validates letter spacing standards (1.3s)
+  ✓  104 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /deals › validates text line length (50-75 characters) (1.3s)
+  ✓  105 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /deals › validates visual hierarchy (automated squint test) (1.3s)
+⚠️  Found 5 potential contrast issues on /deals
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  106 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /deals › validates color contrast for readability (1.4s)
+  ✓  107 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /deals › validates consistent section spacing (1.3s)
+⚠️  7 button padding issues on /deals
+  ✓  108 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /deals › validates CTAs are clearly visible (1.3s)
+  ✓  109 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /deals › validates responsive typography on mobile (1.3s)
+  ✓  110 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /deals › validates subtle shadows on cards (1.3s)
+  ✓  111 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /blog › validates 8-point grid spacing (1.6s)
+  ✓  112 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /blog › validates line height ratios (1.3s)
+  ✓  113 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /blog › validates letter spacing standards (1.3s)
+  ✓  114 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /blog › validates text line length (50-75 characters) (1.3s)
+  ✓  115 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /blog › validates visual hierarchy (automated squint test) (1.3s)
+⚠️  Found 5 potential contrast issues on /blog
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  116 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /blog › validates color contrast for readability (1.3s)
+  ✓  117 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /blog › validates consistent section spacing (1.3s)
+⚠️  7 button padding issues on /blog
+  ✓  118 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /blog › validates CTAs are clearly visible (1.4s)
+  ✓  119 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /blog › validates responsive typography on mobile (1.3s)
+  ✓  120 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /blog › validates subtle shadows on cards (1.3s)
+  ✓  121 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates 8-point grid spacing (1.5s)
+  ✓  122 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates line height ratios (1.2s)
+  ✓  123 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates letter spacing standards (1.2s)
+  ✓  124 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates text line length (50-75 characters) (1.2s)
+  ✓  125 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates visual hierarchy (automated squint test) (1.2s)
+⚠️  Found 5 potential contrast issues on /blog/top-10-midtown-cafes
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  126 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates color contrast for readability (1.2s)
+  ✓  127 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates consistent section spacing (1.2s)
+⚠️  7 button padding issues on /blog/top-10-midtown-cafes
+  ✓  128 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates CTAs are clearly visible (1.2s)
+  ✓  129 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates responsive typography on mobile (1.2s)
+  ✓  130 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /blog/top-10-midtown-cafes › validates subtle shadows on cards (1.2s)
+  ✓  131 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /help › validates 8-point grid spacing (1.2s)
+⚠️  2 header line-height issues on /help
+  ✓  132 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /help › validates line height ratios (814ms)
+⚠️  3 CTA letter-spacing issues on /help
+  ✓  133 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /help › validates letter spacing standards (792ms)
+⚠️  Paragraph width 808px exceeds 800px on /help
+  ✓  134 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /help › validates text line length (50-75 characters) (787ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /help
+  ✓  135 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /help › validates visual hierarchy (automated squint test) (769ms)
+⚠️  Found 4 potential contrast issues on /help
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  136 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /help › validates color contrast for readability (763ms)
+  ✓  137 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /help › validates consistent section spacing (774ms)
+⚠️  14 button padding issues on /help
+  ✓  138 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /help › validates CTAs are clearly visible (814ms)
+  ✓  139 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /help › validates responsive typography on mobile (794ms)
+  ✓  140 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /help › validates subtle shadows on cards (771ms)
+⚠️  Found 5 8-point grid violations on /favorites
+[
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m }
+]
+  ✓  141 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /favorites › validates 8-point grid spacing (1.1s)
+⚠️  2 header line-height issues on /favorites
+  ✓  142 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /favorites › validates line height ratios (853ms)
+  ✓  143 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /favorites › validates letter spacing standards (807ms)
+  ✓  144 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /favorites › validates text line length (50-75 characters) (799ms)
+⚠️  H2 is only 1.13x larger than body text (recommend 1.5x+) on /favorites
+  ✓  145 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /favorites › validates visual hierarchy (automated squint test) (768ms)
+⚠️  Found 7 potential contrast issues on /favorites
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  146 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /favorites › validates color contrast for readability (768ms)
+  ✓  147 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /favorites › validates consistent section spacing (762ms)
+⚠️  3 button padding issues on /favorites
+  ✓  148 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /favorites › validates CTAs are clearly visible (794ms)
+  ✓  149 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /favorites › validates responsive typography on mobile (799ms)
+  ✓  150 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /favorites › validates subtle shadows on cards (766ms)
+  ✓  151 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /compare › validates 8-point grid spacing (1.0s)
+  ✓  152 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /compare › validates line height ratios (776ms)
+  ✓  153 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /compare › validates letter spacing standards (757ms)
+  ✓  154 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /compare › validates text line length (50-75 characters) (763ms)
+⚠️  H2 is only 1.13x larger than body text (recommend 1.5x+) on /compare
+  ✓  155 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /compare › validates visual hierarchy (automated squint test) (732ms)
+⚠️  Found 6 potential contrast issues on /compare
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  156 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /compare › validates color contrast for readability (728ms)
+  ✓  157 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /compare › validates consistent section spacing (742ms)
+⚠️  3 button padding issues on /compare
+  ✓  158 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /compare › validates CTAs are clearly visible (753ms)
+  ✓  159 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /compare › validates responsive typography on mobile (772ms)
+  ✓  160 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /compare › validates subtle shadows on cards (739ms)
+  ✓  161 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /about › validates 8-point grid spacing (1.1s)
+  ✓  162 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /about › validates line height ratios (1.2s)
+  ✓  163 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /about › validates letter spacing standards (766ms)
+⚠️  Paragraph width 814px exceeds 800px on /about
+⚠️  Paragraph width 814px exceeds 800px on /about
+⚠️  Paragraph width 816px exceeds 800px on /about
+  ✓  164 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /about › validates text line length (50-75 characters) (764ms)
+  ✓  165 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /about › validates visual hierarchy (automated squint test) (735ms)
+⚠️  Found 6 potential contrast issues on /about
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  166 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /about › validates color contrast for readability (746ms)
+  ✓  167 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /about › validates consistent section spacing (743ms)
+⚠️  3 button padding issues on /about
+  ✓  168 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /about › validates CTAs are clearly visible (760ms)
+  ✓  169 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /about › validates responsive typography on mobile (776ms)
+  ✓  170 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /about › validates subtle shadows on cards (762ms)
+⚠️  Found 3 8-point grid violations on /contact
+[
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓  171 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /contact › validates 8-point grid spacing (1.3s)
+  ✓  172 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /contact › validates line height ratios (803ms)
+  ✓  173 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /contact › validates letter spacing standards (771ms)
+  ✓  174 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /contact › validates text line length (50-75 characters) (773ms)
+⚠️  H2 is only 1.20x larger than body text (recommend 1.5x+) on /contact
+  ✓  175 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /contact › validates visual hierarchy (automated squint test) (740ms)
+⚠️  Found 6 potential contrast issues on /contact
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  176 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /contact › validates color contrast for readability (756ms)
+  ✓  177 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /contact › validates consistent section spacing (745ms)
+⚠️  4 button padding issues on /contact
+  ✓  178 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /contact › validates CTAs are clearly visible (767ms)
+  ✓  179 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /contact › validates responsive typography on mobile (776ms)
+  ✓  180 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /contact › validates subtle shadows on cards (752ms)
+  ✓  181 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /contact/success › validates 8-point grid spacing (1.2s)
+⚠️  1 header line-height issues on /contact/success
+  ✓  182 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /contact/success › validates line height ratios (779ms)
+  ✓  183 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /contact/success › validates letter spacing standards (776ms)
+  ✓  184 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /contact/success › validates text line length (50-75 characters) (783ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /contact/success
+  ✓  185 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /contact/success › validates visual hierarchy (automated squint test) (742ms)
+⚠️  Found 5 potential contrast issues on /contact/success
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  186 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /contact/success › validates color contrast for readability (748ms)
+  ✓  187 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /contact/success › validates consistent section spacing (749ms)
+⚠️  3 button padding issues on /contact/success
+  ✓  188 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /contact/success › validates CTAs are clearly visible (763ms)
+  ✓  189 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /contact/success › validates responsive typography on mobile (772ms)
+  ✓  190 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /contact/success › validates subtle shadows on cards (737ms)
+⚠️  Found 4 8-point grid violations on /newsletter/success
+[
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓  191 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /newsletter/success › validates 8-point grid spacing (1.1s)
+⚠️  6 header line-height issues on /newsletter/success
+  ✓  192 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /newsletter/success › validates line height ratios (788ms)
+  ✓  193 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /newsletter/success › validates letter spacing standards (787ms)
+  ✓  194 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /newsletter/success › validates text line length (50-75 characters) (781ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /newsletter/success
+  ✓  195 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /newsletter/success › validates visual hierarchy (automated squint test) (734ms)
+⚠️  Found 7 potential contrast issues on /newsletter/success
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  196 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /newsletter/success › validates color contrast for readability (745ms)
+  ✓  197 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /newsletter/success › validates consistent section spacing (767ms)
+⚠️  3 button padding issues on /newsletter/success
+  ✓  198 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /newsletter/success › validates CTAs are clearly visible (769ms)
+  ✓  199 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /newsletter/success › validates responsive typography on mobile (779ms)
+  ✓  200 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /newsletter/success › validates subtle shadows on cards (751ms)
+⚠️  Found 4 8-point grid violations on /reviews/success
+[
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓  201 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /reviews/success › validates 8-point grid spacing (1.2s)
+⚠️  7 header line-height issues on /reviews/success
+  ✓  202 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /reviews/success › validates line height ratios (796ms)
+  ✓  203 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /reviews/success › validates letter spacing standards (765ms)
+  ✓  204 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /reviews/success › validates text line length (50-75 characters) (776ms)
+⚠️  H2 is only 1.33x larger than body text (recommend 1.5x+) on /reviews/success
+  ✓  205 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /reviews/success › validates visual hierarchy (automated squint test) (745ms)
+⚠️  Found 6 potential contrast issues on /reviews/success
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  206 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /reviews/success › validates color contrast for readability (747ms)
+  ✓  207 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /reviews/success › validates consistent section spacing (750ms)
+⚠️  3 button padding issues on /reviews/success
+  ✓  208 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /reviews/success › validates CTAs are clearly visible (775ms)
+  ✓  209 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /reviews/success › validates responsive typography on mobile (779ms)
+  ✓  210 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /reviews/success › validates subtle shadows on cards (748ms)
+  ✓  211 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /privacy › validates 8-point grid spacing (1.4s)
+  ✓  212 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /privacy › validates line height ratios (794ms)
+  ✓  213 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /privacy › validates letter spacing standards (761ms)
+  ✓  214 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /privacy › validates text line length (50-75 characters) (767ms)
+  ✓  215 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /privacy › validates visual hierarchy (automated squint test) (742ms)
+⚠️  Found 8 potential contrast issues on /privacy
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  216 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /privacy › validates color contrast for readability (741ms)
+  ✓  217 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /privacy › validates consistent section spacing (754ms)
+⚠️  3 button padding issues on /privacy
+  ✓  218 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /privacy › validates CTAs are clearly visible (762ms)
+  ✓  219 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /privacy › validates responsive typography on mobile (770ms)
+  ✓  220 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /privacy › validates subtle shadows on cards (746ms)
+  ✓  221 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /terms › validates 8-point grid spacing (1.1s)
+  ✓  222 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /terms › validates line height ratios (812ms)
+  ✓  223 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /terms › validates letter spacing standards (773ms)
+  ✓  224 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /terms › validates text line length (50-75 characters) (777ms)
+  ✓  225 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /terms › validates visual hierarchy (automated squint test) (745ms)
+⚠️  Found 8 potential contrast issues on /terms
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  226 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /terms › validates color contrast for readability (752ms)
+  ✓  227 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /terms › validates consistent section spacing (758ms)
+⚠️  3 button padding issues on /terms
+  ✓  228 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /terms › validates CTAs are clearly visible (777ms)
+  ✓  229 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /terms › validates responsive typography on mobile (764ms)
+  ✓  230 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /terms › validates subtle shadows on cards (751ms)
+  ✓  231 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /auth/login › validates 8-point grid spacing (1.1s)
+  ✓  232 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /auth/login › validates line height ratios (744ms)
+  ✓  233 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /auth/login › validates letter spacing standards (748ms)
+  ✓  234 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /auth/login › validates text line length (50-75 characters) (744ms)
+  ✓  235 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /auth/login › validates visual hierarchy (automated squint test) (740ms)
+⚠️  Found 5 potential contrast issues on /auth/login
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  236 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /auth/login › validates color contrast for readability (730ms)
+  ✓  237 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /auth/login › validates consistent section spacing (733ms)
+⚠️  5 button padding issues on /auth/login
+  ✓  238 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /auth/login › validates CTAs are clearly visible (738ms)
+  ✓  239 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /auth/login › validates responsive typography on mobile (819ms)
+  ✓  240 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /auth/login › validates subtle shadows on cards (745ms)
+  ✓  241 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /auth/signup › validates 8-point grid spacing (1.1s)
+  ✓  242 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /auth/signup › validates line height ratios (748ms)
+  ✓  243 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /auth/signup › validates letter spacing standards (755ms)
+  ✓  244 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /auth/signup › validates text line length (50-75 characters) (743ms)
+  ✓  245 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /auth/signup › validates visual hierarchy (automated squint test) (721ms)
+⚠️  Found 5 potential contrast issues on /auth/signup
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  246 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /auth/signup › validates color contrast for readability (753ms)
+  ✓  247 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /auth/signup › validates consistent section spacing (737ms)
+⚠️  5 button padding issues on /auth/signup
+  ✓  248 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /auth/signup › validates CTAs are clearly visible (759ms)
+  ✓  249 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /auth/signup › validates responsive typography on mobile (744ms)
+  ✓  250 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /auth/signup › validates subtle shadows on cards (735ms)
+⚠️  Found 1 8-point grid violations on /auth/forgot-password
+[ { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m } ]
+  ✓  251 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /auth/forgot-password › validates 8-point grid spacing (1.0s)
+  ✓  252 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /auth/forgot-password › validates line height ratios (782ms)
+  ✓  253 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /auth/forgot-password › validates letter spacing standards (767ms)
+  ✓  254 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /auth/forgot-password › validates text line length (50-75 characters) (763ms)
+⚠️  H1 is only 1.50x larger than body text (recommend 2x+) on /auth/forgot-password
+  ✓  255 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /auth/forgot-password › validates visual hierarchy (automated squint test) (739ms)
+⚠️  Found 4 potential contrast issues on /auth/forgot-password
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  256 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /auth/forgot-password › validates color contrast for readability (741ms)
+  ✓  257 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /auth/forgot-password › validates consistent section spacing (772ms)
+⚠️  3 button padding issues on /auth/forgot-password
+  ✓  258 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /auth/forgot-password › validates CTAs are clearly visible (774ms)
+⚠️  H1 is 24px on mobile (recommend ≥28px) on /auth/forgot-password
+  ✓  259 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /auth/forgot-password › validates responsive typography on mobile (781ms)
+  ✓  260 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /auth/forgot-password › validates subtle shadows on cards (750ms)
+⚠️  Found 1 8-point grid violations on /auth/reset-password
+[ { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m } ]
+  ✓  261 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /auth/reset-password › validates 8-point grid spacing (1.1s)
+  ✓  262 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /auth/reset-password › validates line height ratios (787ms)
+  ✓  263 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /auth/reset-password › validates letter spacing standards (767ms)
+  ✓  264 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /auth/reset-password › validates text line length (50-75 characters) (769ms)
+⚠️  H1 is only 1.50x larger than body text (recommend 2x+) on /auth/reset-password
+  ✓  265 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /auth/reset-password › validates visual hierarchy (automated squint test) (738ms)
+⚠️  Found 4 potential contrast issues on /auth/reset-password
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  266 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /auth/reset-password › validates color contrast for readability (744ms)
+  ✓  267 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /auth/reset-password › validates consistent section spacing (756ms)
+⚠️  7 button padding issues on /auth/reset-password
+  ✓  268 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /auth/reset-password › validates CTAs are clearly visible (790ms)
+⚠️  H1 is 24px on mobile (recommend ≥28px) on /auth/reset-password
+  ✓  269 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /auth/reset-password › validates responsive typography on mobile (766ms)
+  ✓  270 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /auth/reset-password › validates subtle shadows on cards (754ms)
+⚠️  Found 1 8-point grid violations on /auth/verify-email
+[ { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m } ]
+  ✓  271 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /auth/verify-email › validates 8-point grid spacing (1.0s)
+  ✓  272 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /auth/verify-email › validates line height ratios (785ms)
+  ✓  273 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /auth/verify-email › validates letter spacing standards (766ms)
+  ✓  274 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /auth/verify-email › validates text line length (50-75 characters) (779ms)
+⚠️  H1 is only 1.50x larger than body text (recommend 2x+) on /auth/verify-email
+  ✓  275 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /auth/verify-email › validates visual hierarchy (automated squint test) (742ms)
+⚠️  Found 6 potential contrast issues on /auth/verify-email
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  276 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /auth/verify-email › validates color contrast for readability (744ms)
+  ✓  277 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /auth/verify-email › validates consistent section spacing (753ms)
+⚠️  3 button padding issues on /auth/verify-email
+  ✓  278 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /auth/verify-email › validates CTAs are clearly visible (775ms)
+⚠️  H1 is 24px on mobile (recommend ≥28px) on /auth/verify-email
+  ✓  279 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /auth/verify-email › validates responsive typography on mobile (765ms)
+  ✓  280 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /auth/verify-email › validates subtle shadows on cards (751ms)
+  ✓  281 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /profile › validates 8-point grid spacing (1.1s)
+⚠️  4 body line-height issues on /profile
+  ✓  282 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /profile › validates line height ratios (794ms)
+  ✓  283 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /profile › validates letter spacing standards (794ms)
+  ✓  284 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /profile › validates text line length (50-75 characters) (777ms)
+  ✓  285 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /profile › validates visual hierarchy (automated squint test) (754ms)
+⚠️  Found 5 potential contrast issues on /profile
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  286 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /profile › validates color contrast for readability (761ms)
+  ✓  287 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /profile › validates consistent section spacing (760ms)
+⚠️  11 button padding issues on /profile
+  ✓  288 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /profile › validates CTAs are clearly visible (797ms)
+  ✓  289 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /profile › validates responsive typography on mobile (777ms)
+  ✓  290 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /profile › validates subtle shadows on cards (770ms)
+  ✓  291 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard › validates 8-point grid spacing (2.0s)
+  ✓  292 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard › validates line height ratios (1.3s)
+  ✓  293 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard › validates letter spacing standards (1.3s)
+  ✓  294 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard › validates text line length (50-75 characters) (1.3s)
+  ✓  295 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard › validates visual hierarchy (automated squint test) (1.3s)
+⚠️  Found 5 potential contrast issues on /dashboard
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  296 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard › validates color contrast for readability (1.3s)
+  ✓  297 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard › validates consistent section spacing (1.3s)
+⚠️  7 button padding issues on /dashboard
+  ✓  298 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard › validates CTAs are clearly visible (1.3s)
+  ✓  299 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard › validates responsive typography on mobile (1.3s)
+  ✓  300 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard › validates subtle shadows on cards (1.3s)
+  ✓  301 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/settings › validates 8-point grid spacing (1.1s)
+  ✓  302 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/settings › validates line height ratios (776ms)
+  ✓  303 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/settings › validates letter spacing standards (763ms)
+⚠️  Paragraph width 808px exceeds 800px on /dashboard/settings
+  ✓  304 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/settings › validates text line length (50-75 characters) (751ms)
+  ✓  305 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/settings › validates visual hierarchy (automated squint test) (726ms)
+⚠️  Found 4 potential contrast issues on /dashboard/settings
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  306 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/settings › validates color contrast for readability (728ms)
+  ✓  307 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/settings › validates consistent section spacing (738ms)
+⚠️  12 button padding issues on /dashboard/settings
+  ✓  308 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/settings › validates CTAs are clearly visible (759ms)
+  ✓  309 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/settings › validates responsive typography on mobile (757ms)
+  ✓  310 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/settings › validates subtle shadows on cards (740ms)
+⚠️  Found 4 8-point grid violations on /dashboard/analytics
+[
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓  311 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/analytics › validates 8-point grid spacing (1.1s)
+  ✓  312 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/analytics › validates line height ratios (815ms)
+  ✓  313 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/analytics › validates letter spacing standards (784ms)
+  ✓  314 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/analytics › validates text line length (50-75 characters) (822ms)
+  ✓  315 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/analytics › validates visual hierarchy (automated squint test) (750ms)
+⚠️  Found 5 potential contrast issues on /dashboard/analytics
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  316 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/analytics › validates color contrast for readability (757ms)
+  ✓  317 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/analytics › validates consistent section spacing (793ms)
+⚠️  12 button padding issues on /dashboard/analytics
+  ✓  318 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/analytics › validates CTAs are clearly visible (804ms)
+  ✓  319 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/analytics › validates responsive typography on mobile (815ms)
+  ✓  320 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/analytics › validates subtle shadows on cards (781ms)
+  ✓  321 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/events › validates 8-point grid spacing (1.8s)
+  ✓  322 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/events › validates line height ratios (1.4s)
+  ✓  323 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/events › validates letter spacing standards (1.5s)
+  ✓  324 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/events › validates text line length (50-75 characters) (1.4s)
+  ✓  325 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/events › validates visual hierarchy (automated squint test) (1.3s)
+⚠️  Found 5 potential contrast issues on /dashboard/events
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  326 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/events › validates color contrast for readability (1.4s)
+  ✓  327 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/events › validates consistent section spacing (1.4s)
+⚠️  7 button padding issues on /dashboard/events
+  ✓  328 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/events › validates CTAs are clearly visible (1.4s)
+  ✓  329 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/events › validates responsive typography on mobile (1.4s)
+  ✓  330 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/events › validates subtle shadows on cards (1.4s)
+⚠️  Found 1 8-point grid violations on /dashboard/events/new
+[ { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m } ]
+  ✓  331 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/events/new › validates 8-point grid spacing (1.1s)
+⚠️  2 header line-height issues on /dashboard/events/new
+  ✓  332 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/events/new › validates line height ratios (823ms)
+  ✓  333 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/events/new › validates letter spacing standards (763ms)
+⚠️  Paragraph width 808px exceeds 800px on /dashboard/events/new
+  ✓  334 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/events/new › validates text line length (50-75 characters) (753ms)
+⚠️  H2 is only 1.25x larger than body text (recommend 1.5x+) on /dashboard/events/new
+  ✓  335 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/events/new › validates visual hierarchy (automated squint test) (723ms)
+⚠️  Found 6 potential contrast issues on /dashboard/events/new
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  336 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/events/new › validates color contrast for readability (721ms)
+  ✓  337 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/events/new › validates consistent section spacing (729ms)
+⚠️  5 button padding issues on /dashboard/events/new
+  ✓  338 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/events/new › validates CTAs are clearly visible (756ms)
+  ✓  339 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/events/new › validates responsive typography on mobile (762ms)
+  ✓  340 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/events/new › validates subtle shadows on cards (729ms)
+  ✓  341 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/deals › validates 8-point grid spacing (1.8s)
+  ✓  342 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/deals › validates line height ratios (1.4s)
+  ✓  343 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/deals › validates letter spacing standards (1.4s)
+  ✓  344 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/deals › validates text line length (50-75 characters) (1.4s)
+  ✓  345 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/deals › validates visual hierarchy (automated squint test) (1.4s)
+⚠️  Found 5 potential contrast issues on /dashboard/deals
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  346 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/deals › validates color contrast for readability (1.4s)
+  ✓  347 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/deals › validates consistent section spacing (1.4s)
+⚠️  7 button padding issues on /dashboard/deals
+  ✓  348 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/deals › validates CTAs are clearly visible (1.4s)
+  ✓  349 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/deals › validates responsive typography on mobile (1.4s)
+  ✓  350 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/deals › validates subtle shadows on cards (1.4s)
+⚠️  Found 3 8-point grid violations on /dashboard/deals/new
+[
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginTop'[39m, value: [32m'12px'[39m },
+  { element: [32m'H3'[39m, property: [32m'marginBottom'[39m, value: [32m'12px'[39m }
+]
+  ✓  351 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/deals/new › validates 8-point grid spacing (1.0s)
+⚠️  2 header line-height issues on /dashboard/deals/new
+  ✓  352 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/deals/new › validates line height ratios (796ms)
+  ✓  353 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/deals/new › validates letter spacing standards (765ms)
+⚠️  Paragraph width 808px exceeds 800px on /dashboard/deals/new
+  ✓  354 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/deals/new › validates text line length (50-75 characters) (763ms)
+⚠️  H2 is only 1.25x larger than body text (recommend 1.5x+) on /dashboard/deals/new
+  ✓  355 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/deals/new › validates visual hierarchy (automated squint test) (736ms)
+⚠️  Found 6 potential contrast issues on /dashboard/deals/new
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  356 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/deals/new › validates color contrast for readability (744ms)
+  ✓  357 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/deals/new › validates consistent section spacing (751ms)
+⚠️  4 button padding issues on /dashboard/deals/new
+  ✓  358 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/deals/new › validates CTAs are clearly visible (772ms)
+  ✓  359 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/deals/new › validates responsive typography on mobile (775ms)
+  ✓  360 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/deals/new › validates subtle shadows on cards (749ms)
+⚠️  Found 4 8-point grid violations on /dashboard/reviews
+[
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m },
+  { element: [32m'P'[39m, property: [32m'marginBottom'[39m, value: [32m'4px'[39m }
+]
+  ✓  361 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /dashboard/reviews › validates 8-point grid spacing (1.7s)
+⚠️  5 header line-height issues on /dashboard/reviews
+  ✓  362 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /dashboard/reviews › validates line height ratios (1.1s)
+  ✓  363 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /dashboard/reviews › validates letter spacing standards (1.1s)
+⚠️  Paragraph width 808px exceeds 800px on /dashboard/reviews
+  ✓  364 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /dashboard/reviews › validates text line length (50-75 characters) (1.1s)
+  ✓  365 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /dashboard/reviews › validates visual hierarchy (automated squint test) (1.0s)
+⚠️  Found 5 potential contrast issues on /dashboard/reviews
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  366 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /dashboard/reviews › validates color contrast for readability (1.0s)
+  ✓  367 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /dashboard/reviews › validates consistent section spacing (1.1s)
+⚠️  16 button padding issues on /dashboard/reviews
+  ✓  368 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /dashboard/reviews › validates CTAs are clearly visible (1.1s)
+  ✓  369 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /dashboard/reviews › validates responsive typography on mobile (1.1s)
+  ✓  370 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /dashboard/reviews › validates subtle shadows on cards (1.0s)
+  ✓  371 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /admin › validates 8-point grid spacing (972ms)
+  ✓  372 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /admin › validates line height ratios (773ms)
+  ✓  373 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /admin › validates letter spacing standards (755ms)
+  ✓  374 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /admin › validates text line length (50-75 characters) (742ms)
+  ✓  375 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /admin › validates visual hierarchy (automated squint test) (723ms)
+⚠️  Found 5 potential contrast issues on /admin
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  376 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /admin › validates color contrast for readability (728ms)
+  ✓  377 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /admin › validates consistent section spacing (744ms)
+⚠️  5 button padding issues on /admin
+  ✓  378 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /admin › validates CTAs are clearly visible (757ms)
+  ✓  379 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /admin › validates responsive typography on mobile (758ms)
+  ✓  380 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /admin › validates subtle shadows on cards (737ms)
+  ✓  381 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /admin/users › validates 8-point grid spacing (750ms)
+  ✓  382 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /admin/users › validates line height ratios (747ms)
+  ✓  383 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /admin/users › validates letter spacing standards (750ms)
+  ✓  384 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /admin/users › validates text line length (50-75 characters) (741ms)
+  ✓  385 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /admin/users › validates visual hierarchy (automated squint test) (724ms)
+⚠️  Found 5 potential contrast issues on /admin/users
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  386 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /admin/users › validates color contrast for readability (726ms)
+  ✓  387 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /admin/users › validates consistent section spacing (738ms)
+⚠️  5 button padding issues on /admin/users
+  ✓  388 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /admin/users › validates CTAs are clearly visible (752ms)
+  ✓  389 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /admin/users › validates responsive typography on mobile (768ms)
+  ✓  390 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /admin/users › validates subtle shadows on cards (735ms)
+  ✓  391 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /admin/moderation › validates 8-point grid spacing (752ms)
+  ✓  392 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /admin/moderation › validates line height ratios (746ms)
+  ✓  393 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /admin/moderation › validates letter spacing standards (749ms)
+  ✓  394 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /admin/moderation › validates text line length (50-75 characters) (744ms)
+  ✓  395 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /admin/moderation › validates visual hierarchy (automated squint test) (731ms)
+⚠️  Found 5 potential contrast issues on /admin/moderation
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  396 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /admin/moderation › validates color contrast for readability (732ms)
+  ✓  397 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /admin/moderation › validates consistent section spacing (756ms)
+⚠️  5 button padding issues on /admin/moderation
+  ✓  398 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /admin/moderation › validates CTAs are clearly visible (760ms)
+  ✓  399 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /admin/moderation › validates responsive typography on mobile (749ms)
+  ✓  400 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /admin/moderation › validates subtle shadows on cards (736ms)
+  ✓  401 [chromium] › tests/design-system.spec.js:87:7 › Design System Compliance › Page: /admin/businesses › validates 8-point grid spacing (752ms)
+  ✓  402 [chromium] › tests/design-system.spec.js:133:7 › Design System Compliance › Page: /admin/businesses › validates line height ratios (760ms)
+  ✓  403 [chromium] › tests/design-system.spec.js:191:7 › Design System Compliance › Page: /admin/businesses › validates letter spacing standards (754ms)
+  ✓  404 [chromium] › tests/design-system.spec.js:240:7 › Design System Compliance › Page: /admin/businesses › validates text line length (50-75 characters) (739ms)
+  ✓  405 [chromium] › tests/design-system.spec.js:270:7 › Design System Compliance › Page: /admin/businesses › validates visual hierarchy (automated squint test) (731ms)
+⚠️  Found 5 potential contrast issues on /admin/businesses
+[
+  {
+    element: [32m'A'[39m,
+    text: [32m'MMidtown BookCommunity Directo'[39m,
+    contrast: [32m'27.7'[39m
+  },
+  { element: [32m'SPAN'[39m, text: [32m'Midtown Book'[39m, contrast: [32m'27.7'[39m },
+  { element: [32m'A'[39m, text: [32m'Sign In'[39m, contrast: [32m'27.7'[39m }
+]
+  ✓  406 [chromium] › tests/design-system.spec.js:307:7 › Design System Compliance › Page: /admin/businesses › validates color contrast for readability (731ms)
+  ✓  407 [chromium] › tests/design-system.spec.js:351:7 › Design System Compliance › Page: /admin/businesses › validates consistent section spacing (741ms)
+⚠️  5 button padding issues on /admin/businesses
+  ✓  408 [chromium] › tests/design-system.spec.js:385:7 › Design System Compliance › Page: /admin/businesses › validates CTAs are clearly visible (757ms)
+  ✓  409 [chromium] › tests/design-system.spec.js:423:7 › Design System Compliance › Page: /admin/businesses › validates responsive typography on mobile (768ms)
+  ✓  410 [chromium] › tests/design-system.spec.js:453:7 › Design System Compliance › Page: /admin/businesses › validates subtle shadows on cards (735ms)
+📸 Screenshot saved for / → tests/screenshots_.png
+📸 Screenshot saved for /businesses → tests/screenshots_businesses.png
+📸 Screenshot saved for /businesses/sunrise-cafe → tests/screenshots_businesses_sunrise-cafe.png
+📸 Screenshot saved for /auth/login → tests/screenshots_auth_login.png
+📸 Screenshot saved for /dashboard → tests/screenshots_dashboard.png
+📸 Screenshot saved for /admin → tests/screenshots_admin.png
+✅ Visual regression screenshots complete
+   → Open screenshots and perform squint test manually
+   → Headlines and CTAs should stand out when blurred
+  ✓  411 [chromium] › tests/design-system.spec.js:496:3 › Visual Regression (Squint Test) › captures page screenshots for manual squint test (7.0s)
+
+  Slow test file: [chromium] › tests/design-system.spec.js (6.7m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  411 passed (6.7m)
+
+To open last HTML report run:
+
+  npx playwright show-report
+
