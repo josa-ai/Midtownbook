@@ -142,32 +142,6 @@ export function Hero() {
               <Link href="/businesses/new">Add Your Business</Link>
             </Button>
           </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            variants={fadeInUp}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-16 pt-16 border-t border-border"
-          >
-            {[
-              { label: 'Businesses', value: '1,000+' },
-              { label: 'Reviews', value: '10,000+' },
-              { label: 'Categories', value: '50+' },
-              { label: 'Community Members', value: '5,000+' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                className="text-center"
-              >
-                <p className="text-display-sm font-serif font-bold text-primary-600 mb-1">
-                  {stat.value}
-                </p>
-                <p className="text-body-sm text-muted-foreground">{stat.label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </Container>
     </section>
