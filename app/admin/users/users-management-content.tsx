@@ -221,7 +221,7 @@ export function UsersManagementContent() {
 
         {/* Users Table */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList variant="line">
+          <TabsList>
             <TabsTrigger value="all">All Users ({mockUsers.length})</TabsTrigger>
             <TabsTrigger value="active">Active ({mockUsers.filter((u) => u.status === 'active').length})</TabsTrigger>
             <TabsTrigger value="business_owners">Business Owners ({mockUsers.filter((u) => u.role === 'business_owner').length})</TabsTrigger>

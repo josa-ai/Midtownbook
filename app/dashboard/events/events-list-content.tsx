@@ -199,7 +199,7 @@ export function EventsListContent() {
         {/* Filters */}
         <div className="flex items-center justify-between mb-6">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList variant="line">
+            <TabsList>
               <TabsTrigger value="all">All ({mockEvents.length})</TabsTrigger>
               <TabsTrigger value="published">
                 Published ({mockEvents.filter((e) => e.status === 'published').length})

@@ -211,7 +211,7 @@ export function DashboardContent({ user }: DashboardContentProps) {
             <Card>
               <CardContent className="p-6">
                 <Tabs value={activeTab} onValueChange={setActiveTab}>
-                  <TabsList variant="line">
+                  <TabsList>
                     <TabsTrigger value="overview">Overview</TabsTrigger>
                     <TabsTrigger value="reviews">Reviews</TabsTrigger>
                     <TabsTrigger value="analytics">Analytics</TabsTrigger>

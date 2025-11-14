@@ -231,7 +231,7 @@ export function BlogContent() {
 
         {/* Category Tabs */}
         <Tabs value={activeCategory} onValueChange={setActiveCategory} className="mb-8">
-          <TabsList variant="line">
+          <TabsList>
             {categories.map((category) => (
               <TabsTrigger key={category} value={category}>
                 {category === 'all' ? 'All Posts' : category}

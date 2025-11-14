@@ -150,7 +150,7 @@ export function AnalyticsContent() {
 
         {/* Analytics Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList variant="line">
+          <TabsList>
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="traffic">Traffic</TabsTrigger>
             <TabsTrigger value="engagement">Engagement</TabsTrigger>

@@ -246,7 +246,7 @@ export function ReviewsContent() {
 
         {/* Reviews Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList variant="line">
+          <TabsList>
             <TabsTrigger value="all">All Reviews ({mockReviews.length})</TabsTrigger>
             <TabsTrigger value="pending">
               Pending Response ({mockReviews.filter((r) => !r.response).length})

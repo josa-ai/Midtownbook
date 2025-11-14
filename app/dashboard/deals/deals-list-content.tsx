@@ -229,7 +229,7 @@ export function DealsListContent() {
         {/* Filters */}
         <div className="flex items-center justify-between mb-6">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList variant="line">
+            <TabsList>
               <TabsTrigger value="all">All ({mockDeals.length})</TabsTrigger>
               <TabsTrigger value="active">
                 Active ({mockDeals.filter((d) => d.status === 'active').length})

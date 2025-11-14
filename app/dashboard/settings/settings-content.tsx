@@ -114,7 +114,7 @@ export function SettingsContent() {
 
         {/* Settings Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList variant="line">
+          <TabsList>
             <TabsTrigger value="business">Business Profile</TabsTrigger>
             <TabsTrigger value="account">Account</TabsTrigger>
             <TabsTrigger value="notifications">Notifications</TabsTrigger>

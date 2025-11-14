@@ -172,7 +172,7 @@ export function ModerationContent() {
         {/* Filters */}
         <div className="flex items-center justify-between mb-6">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList variant="line">
+            <TabsList>
               <TabsTrigger value="pending">Pending ({stats.pending})</TabsTrigger>
               <TabsTrigger value="approved">Approved ({stats.approved})</TabsTrigger>
               <TabsTrigger value="removed">Removed ({stats.removed})</TabsTrigger>

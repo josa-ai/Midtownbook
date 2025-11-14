@@ -131,7 +131,7 @@ export function ProfileContent() {
 
         {/* Profile Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList variant="line">
+          <TabsList>
             <TabsTrigger value="info">Profile Info</TabsTrigger>
             <TabsTrigger value="reviews">My Reviews ({mockUserReviews.length})</TabsTrigger>
             <TabsTrigger value="favorites">Favorites ({mockFavorites.length})</TabsTrigger>
