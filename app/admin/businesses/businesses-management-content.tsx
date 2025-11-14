@@ -278,7 +278,7 @@ export function BusinessesManagementContent() {
 
         {/* Businesses Table */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList variant="line">
+          <TabsList>
             <TabsTrigger value="all">All ({mockBusinesses.length})</TabsTrigger>
             <TabsTrigger value="pending">Pending ({stats.pending})</TabsTrigger>
             <TabsTrigger value="approved">Approved ({stats.approved})</TabsTrigger>
