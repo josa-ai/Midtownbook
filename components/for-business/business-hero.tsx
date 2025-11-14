@@ -38,8 +38,8 @@ export function BusinessHero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-display-xl md:text-display-2xl font-serif font-bold text-foreground mb-6"
           >
-            Grow Your Business with{' '}
-            <span className="text-primary-600">Midtown Book</span>
+            Join{' '}
+            <span className="text-primary-600">Mid-Town Lakeland's Revival</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -49,8 +49,7 @@ export function BusinessHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-body-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            Connect with thousands of local customers actively searching for businesses like yours.
-            Increase visibility, build trust, and drive real growth.
+            Reach thousands of visitors to Bonnet Springs Park (USA Today's #1 City Park) and Detroit Tigers Spring Training. Get discovered by customers exploring Lakeland's most exciting district.
           </motion.p>
 
           {/* Key Benefits */}
@@ -61,8 +60,8 @@ export function BusinessHero() {
             className="flex flex-wrap justify-center gap-6 mb-10"
           >
             {[
-              'No setup fees',
-              'Cancel anytime',
+              'Park & Tigers visitor traffic',
+              'Memorial Boulevard visibility',
               'Featured placement',
               'Verified reviews',
             ].map((benefit) => (
@@ -101,31 +100,31 @@ export function BusinessHero() {
             className="mt-12 pt-8 border-t border-border"
           >
             <p className="text-label-sm text-muted-foreground mb-4">
-              Trusted by local businesses
+              Trusted by Mid-Town Lakeland businesses
             </p>
             <div className="flex flex-wrap justify-center items-center gap-8">
               <div className="text-center">
                 <div className="text-heading-lg font-bold text-primary-600">
-                  1,000+
+                  1M+
                 </div>
                 <div className="text-label-sm text-muted-foreground">
-                  Active Listings
+                  Annual Park Visitors
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-heading-lg font-bold text-primary-600">
-                  10,000+
+                  50K+
                 </div>
                 <div className="text-label-sm text-muted-foreground">
-                  Monthly Searches
+                  Tigers Fans Yearly
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-heading-lg font-bold text-primary-600">
-                  98%
+                  #1
                 </div>
                 <div className="text-label-sm text-muted-foreground">
-                  Customer Satisfaction
+                  City Park in America
                 </div>
               </div>
             </div>

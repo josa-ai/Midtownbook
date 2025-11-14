@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "What makes Midtown Book different from other directories?",
     answer:
-      "We're hyper-focused on local community engagement. Unlike generic directories, we only feature businesses in Midtown, creating a trusted local network. Our verified review system, featured placements, and direct customer engagement tools are specifically designed to help neighborhood businesses thrive.",
+      "We're hyper-focused on Mid-Town Lakeland's unique position next to world-class attractions. Unlike generic directories, we connect your business to over 1 million annual park visitors and 50K+ Tigers fans. Our verified reviews, strategic placement during peak times, and 'Show Your Ticket' deal platform are specifically designed to help Mid-Town businesses thrive.",
   },
   {
     question: "Can I try before I commit?",

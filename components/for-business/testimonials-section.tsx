@@ -15,7 +15,7 @@ const testimonials = [
     business: "Blue Lotus Yoga Studio",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
     quote:
-      "Within 3 months of joining Midtown Book, we saw a 45% increase in new student sign-ups. The verified reviews really helped build trust with potential customers.",
+      "Within 3 months of listing on Midtown Book, we saw a 45% increase in new student sign-ups. Park visitors looking for post-walk wellness became our biggest growth segment.",
     results: "+45% new customers",
     rating: 5,
   },
@@ -25,7 +25,7 @@ const testimonials = [
     business: "La Cocina Restaurant",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=marcus",
     quote:
-      "The featured placement during lunch hours brought in so much foot traffic. We've had to hire two more staff members to keep up with demand!",
+      "Our Memorial Boulevard location combined with featured placement during Tigers games brought so much foot traffic. Pre-game and post-game crowds tripled our lunch revenue!",
     results: "+60% lunch reservations",
     rating: 5,
   },
@@ -35,7 +35,7 @@ const testimonials = [
     business: "Elegance Hair & Spa",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=jennifer",
     quote:
-      "The deals feature is a game-changer. We posted a first-time customer promotion and got 82 bookings in one week. Best marketing ROI we've ever had.",
+      "Our 'Show Your Park Receipt' promotion was a game-changer. We got 82 bookings in one week from families visiting Bonnet Springs. Best marketing ROI we've ever had.",
     results: "82 new clients in 1 week",
     rating: 5,
   },
@@ -65,7 +65,7 @@ const testimonials = [
     business: "Artisan Coffee Roasters",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=robert",
     quote:
-      "Midtown Book connected us with the local community in a way social media never did. Real customers leaving real reviews made all the difference.",
+      "Being on Mid-Town Lakeland's directory connected us with park visitors and locals in a way social media never did. Real customers leaving real reviews made all the difference.",
     results: "+50% weekend traffic",
     rating: 5,
   },

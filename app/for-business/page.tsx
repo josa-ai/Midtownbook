@@ -9,9 +9,9 @@ import {
 import { Features } from '@/components/home/features';
 
 export const metadata = {
-  title: 'For Business | Midtown Book',
+  title: 'For Business | Mid-Town Lakeland Directory',
   description:
-    'Grow your local business with Midtown Book. Connect with thousands of customers, build trust with verified reviews, and increase visibility in your community.',
+    'Join Mid-Town Lakeland\'s revival. Reach thousands of Bonnet Springs Park and Detroit Tigers visitors. Get discovered by customers exploring Lakeland\'s most exciting district.',
 };
 
 export default function ForBusinessPage() {

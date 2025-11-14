@@ -17,20 +17,23 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Midtown Book - Community Business Directory',
-    template: '%s | Midtown Book',
+    default: 'Mid-Town Lakeland Directory | Bonnet Springs Park & Detroit Tigers',
+    template: '%s | Mid-Town Lakeland',
   },
   description:
-    'Discover and support local businesses in Midtown. Your comprehensive community business directory featuring authentic reviews, events, and exclusive deals.',
+    'Discover Mid-Town Lakeland businesses near Bonnet Springs Park (USA Today\'s #1 City Park) and Detroit Tigers Spring Training. Find dining, shopping, and services in Lakeland, Florida\'s most exciting district.',
   keywords: [
-    'Midtown',
-    'local business',
+    'Mid-Town Lakeland',
+    'Lakeland Florida',
+    'Bonnet Springs Park',
+    'Detroit Tigers Spring Training',
+    'Lakeland businesses',
+    'Memorial Boulevard',
+    'Florida Avenue Lakeland',
+    'Lakeland restaurants',
+    'Lakeland shopping',
     'business directory',
-    'community',
-    'reviews',
-    'events',
-    'deals',
-    'small business',
+    'local business',
   ],
   authors: [{ name: 'Midtown Book' }],
   creator: 'Midtown Book',
@@ -40,24 +43,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://midtownbook.com',
-    siteName: 'Midtown Book',
-    title: 'Midtown Book - Community Business Directory',
+    siteName: 'Mid-Town Lakeland Directory',
+    title: 'Mid-Town Lakeland | Home to USA Today\'s #1 City Park',
     description:
-      'Discover and support local businesses in Midtown. Your comprehensive community business directory.',
+      'Discover Mid-Town Lakeland businesses near Bonnet Springs Park and Detroit Tigers Spring Training. Your guide to Lakeland, Florida\'s most exciting district.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Midtown Book',
+        alt: 'Mid-Town Lakeland - Home to Bonnet Springs Park',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Midtown Book - Community Business Directory',
+    title: 'Mid-Town Lakeland | Bonnet Springs Park & Detroit Tigers',
     description:
-      'Discover and support local businesses in Midtown. Your comprehensive community business directory.',
+      'Discover Mid-Town Lakeland businesses near USA Today\'s #1 City Park and Detroit Tigers Spring Training in Lakeland, Florida.',
     images: ['/og-image.jpg'],
   },
   robots: {

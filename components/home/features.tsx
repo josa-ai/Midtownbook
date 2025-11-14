@@ -15,45 +15,45 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 
 const features = [
   {
-    name: 'Verified Reviews',
+    name: 'Built-In Foot Traffic',
     description:
-      'Read authentic reviews from real customers to make informed decisions about local businesses.',
-    icon: Shield,
+      'Over 1 million annual visitors to Bonnet Springs Park and 50K+ Tigers fans looking for nearby dining, shopping, and services.',
+    icon: TrendingUp,
     color: 'text-primary-600 bg-primary-100',
   },
   {
-    name: 'Ratings & Rankings',
+    name: 'Featured Placement',
     description:
-      'Discover top-rated businesses based on community feedback and comprehensive ratings.',
+      'Get prominent visibility on the homepage and in category searches during peak park and game times.',
     icon: Star,
     color: 'text-accent-600 bg-accent-100',
   },
   {
-    name: 'Exclusive Deals',
+    name: 'Show Your Ticket Deals',
     description:
-      'Access special offers, discounts, and promotions available only to our community members.',
+      'Attract park-goers and Tigers fans with exclusive "Show Your Ticket" promotions that drive immediate traffic.',
     icon: Tag,
     color: 'text-secondary-600 bg-secondary-100',
   },
   {
-    name: 'Local Events',
+    name: 'Event Integration',
     description:
-      'Stay updated with community events, workshops, and activities happening in Midtown.',
+      'Connect your business to park events, Tigers game days, and neighborhood activities to maximize exposure.',
     icon: Calendar,
     color: 'text-primary-600 bg-primary-100',
   },
   {
-    name: 'Community Driven',
+    name: 'Verified Reviews',
     description:
-      'Join a vibrant community of locals supporting and promoting neighborhood businesses.',
-    icon: Users,
+      'Build trust with authentic reviews from real customers exploring Mid-Town Lakeland.',
+    icon: Shield,
     color: 'text-info bg-info-light',
   },
   {
-    name: 'Business Growth',
+    name: 'Memorial Boulevard Visibility',
     description:
-      'Help local businesses grow and thrive by connecting them with the community.',
-    icon: TrendingUp,
+      'Showcase your business on Mid-Town\'s main corridor connecting world-class attractions to local gems.',
+    icon: Users,
     color: 'text-secondary-600 bg-secondary-100',
   },
 ];
@@ -90,7 +90,7 @@ export function Features() {
             transition={{ duration: 0.5 }}
             className="text-display-md font-serif font-bold text-foreground mb-4"
           >
-            Why Choose Midtown Book?
+            Why List Your Business in Mid-Town?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -99,8 +99,7 @@ export function Features() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-body-lg text-muted-foreground"
           >
-            Everything you need to discover, connect with, and support local businesses
-            in one place
+            Reach thousands of park and Tigers visitors while serving the neighborhood you call home
           </motion.p>
         </div>
 
