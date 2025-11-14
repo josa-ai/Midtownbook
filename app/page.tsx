@@ -1,4 +1,4 @@
-import { Hero, FeaturedCategories, FeaturedBusinesses, Features, CtaSection } from '@/components/home';
+import { Hero, FeaturedCategories, FeaturedBusinesses, CtaSection } from '@/components/home';
 import { Header, Footer } from '@/components/layout';
 
 export default function HomePage() {
@@ -9,7 +9,6 @@ export default function HomePage() {
         <Hero />
         <FeaturedCategories />
         <FeaturedBusinesses />
-        <Features />
         <CtaSection />
       </main>
       <Footer />

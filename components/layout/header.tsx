@@ -101,7 +101,7 @@ export function Header() {
                       </Link>
                     </Button>
                     <Button variant="primary" size="sm" asChild>
-                      <Link href="/businesses/new">Add Business</Link>
+                      <Link href="/for-business">Add Your Business</Link>
                     </Button>
                   </>
                 )}
@@ -190,7 +190,7 @@ export function Header() {
                         asChild
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        <Link href="/businesses/new">Add Business</Link>
+                        <Link href="/for-business">Add Your Business</Link>
                       </Button>
                     </>
                   )}

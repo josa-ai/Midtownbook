@@ -15,11 +15,11 @@ const footerLinks = {
     { name: 'Featured', href: '/featured' },
   ],
   forBusiness: [
-    { name: 'Add Your Business', href: '/businesses/new' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Success Stories', href: '/success-stories' },
-    { name: 'Business Resources', href: '/resources' },
-    { name: 'Advertise', href: '/advertise' },
+    { name: 'For Business', href: '/for-business' },
+    { name: 'Add Your Business', href: '/for-business' },
+    { name: 'Pricing', href: '/for-business#pricing' },
+    { name: 'Success Stories', href: '/for-business#testimonials' },
+    { name: 'FAQ', href: '/for-business#faq' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
