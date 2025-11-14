@@ -24,9 +24,10 @@ async function getBusiness(slug: string) {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const business = await getBusiness(params.slug);
+  const { slug } = await params;
+  const business = await getBusiness(slug);
 
   if (!business) {
     return { title: 'Business Not Found' };
@@ -38,8 +39,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function ClaimBusinessPage({ params }: { params: { slug: string } }) {
-  const business = await getBusiness(params.slug);
+export default async function ClaimBusinessPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const business = await getBusiness(slug);
 
   if (!business) {
     notFound();

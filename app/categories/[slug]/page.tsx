@@ -56,8 +56,9 @@ async function getCategoryBusinesses(slug: string) {
   ];
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const category = await getCategory(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const category = await getCategory(slug);
 
   if (!category) {
     return { title: 'Category Not Found' };
@@ -69,14 +70,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function CategoryDetailPage({ params }: { params: { slug: string } }) {
-  const category = await getCategory(params.slug);
+export default async function CategoryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const category = await getCategory(slug);
 
   if (!category) {
     notFound();
   }
 
-  const businesses = await getCategoryBusinesses(params.slug);
+  const businesses = await getCategoryBusinesses(slug);
 
   return (
     <>
