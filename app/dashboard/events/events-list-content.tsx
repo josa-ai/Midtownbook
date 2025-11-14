@@ -174,7 +174,7 @@ export function EventsListContent() {
             title="Total Events"
             value={stats.totalEvents}
             icon={Calendar}
-            variant="default"
+           
           />
           <StatCard
             title="Upcoming Events"
@@ -192,7 +192,7 @@ export function EventsListContent() {
             title="Revenue"
             value={`$${stats.revenue.toLocaleString()}`}
             icon={TrendingUp}
-            variant="default"
+           
           />
         </div>
 

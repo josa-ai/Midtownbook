@@ -216,13 +216,13 @@ export function DealsListContent() {
             title="Avg. Discount"
             value={`${stats.avgDiscount}%`}
             icon={Percent}
-            variant="default"
+           
           />
           <StatCard
             title="Revenue Impact"
             value={`$${stats.revenue.toLocaleString()}`}
             icon={DollarSign}
-            variant="default"
+           
           />
         </div>
 

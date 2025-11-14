@@ -112,7 +112,7 @@ export function AnalyticsContent() {
               isPositive: true,
               label: 'vs last period',
             }}
-            variant="default"
+           
           />
           <StatCard
             title="Average Rating"
@@ -144,7 +144,7 @@ export function AnalyticsContent() {
               isPositive: false,
               label: 'vs last period',
             }}
-            variant="default"
+           
           />
         </div>
 

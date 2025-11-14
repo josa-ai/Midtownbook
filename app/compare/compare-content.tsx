@@ -469,7 +469,7 @@ export function CompareContent() {
                           <td key={business.id} className="p-3">
                             <div className="flex flex-wrap gap-2">
                               {business.features.map((feature, idx) => (
-                                <Badge key={idx} variant="default">{feature}</Badge>
+                                <Badge key={idx}>{feature}</Badge>
                               ))}
                             </div>
                           </td>

@@ -113,7 +113,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                   By {event.businessName}
                 </Link>
                 {event.tags.map((tag) => (
-                  <Badge key={tag} variant="default">
+                  <Badge key={tag}>
                     {tag}
                   </Badge>
                 ))}

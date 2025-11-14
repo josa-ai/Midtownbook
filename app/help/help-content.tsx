@@ -274,7 +274,7 @@ export function HelpContent() {
         {/* FAQ Content */}
         {!searchQuery ? (
           <Tabs value={activeCategory} onValueChange={setActiveCategory}>
-            <TabsList variant="line" className="mb-8">
+            <TabsList className="mb-8">
               {categories.map((category) => {
                 const Icon = category.icon;
                 return (

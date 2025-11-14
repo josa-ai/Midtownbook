@@ -250,7 +250,7 @@ export function BlogContent() {
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="default">{post.category}</Badge>
+                    <Badge>{post.category}</Badge>
                   </div>
                   <h3 className="font-serif font-semibold text-heading-sm mb-2 line-clamp-2 hover:text-primary-600 transition-colors">
                     {post.title}

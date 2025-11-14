@@ -183,7 +183,7 @@ export function UsersManagementContent() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <StatCard title="Total Users" value={stats.totalUsers.toLocaleString()} icon={Users} variant="default" />
+          <StatCard title="Total Users" value={stats.totalUsers.toLocaleString()} icon={Users} />
           <StatCard title="Active Users" value={stats.activeUsers.toLocaleString()} icon={Users} variant="success" />
           <StatCard title="Business Owners" value={stats.businessOwners} icon={Shield} variant="primary" />
           <StatCard title="Suspended" value={stats.suspended} icon={Ban} variant="warning" />

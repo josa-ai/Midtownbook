@@ -239,7 +239,7 @@ export function BusinessesManagementContent() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-          <StatCard title="Total Businesses" value={stats.total} icon={Building2} variant="default" />
+          <StatCard title="Total Businesses" value={stats.total} icon={Building2} />
           <StatCard title="Pending Review" value={stats.pending} icon={AlertTriangle} variant="warning" />
           <StatCard title="Approved" value={stats.approved} icon={CheckCircle} variant="success" />
           <StatCard title="Rejected" value={stats.rejected} icon={XCircle} variant="error" />

@@ -166,7 +166,7 @@ export function ModerationContent() {
           <StatCard title="Pending Review" value={stats.pending} icon={AlertTriangle} variant="warning" />
           <StatCard title="Approved" value={stats.approved} icon={Check} variant="success" />
           <StatCard title="Removed" value={stats.removed} icon={X} variant="error" />
-          <StatCard title="Total Reports" value={stats.totalReports} icon={MessageSquare} variant="default" />
+          <StatCard title="Total Reports" value={stats.totalReports} icon={MessageSquare} />
         </div>
 
         {/* Filters */}
@@ -232,7 +232,7 @@ export function ModerationContent() {
                       <p className="font-semibold text-body-sm mb-2">Business Listing:</p>
                       <h4 className="font-semibold text-body-md mb-1">{item.content.name}</h4>
                       <p className="text-body-sm text-muted-foreground mb-2">{item.content.description}</p>
-                      <Badge variant="default">{item.content.category}</Badge>
+                      <Badge>{item.content.category}</Badge>
                     </div>
                   )}
 

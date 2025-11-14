@@ -148,7 +148,7 @@ export function DashboardContent({ user }: DashboardContentProps) {
               isPositive: true,
               label: 'vs last month',
             }}
-            variant="default"
+           
           />
           <StatCard
             title="Average Rating"
@@ -180,7 +180,7 @@ export function DashboardContent({ user }: DashboardContentProps) {
               isPositive: false,
               label: 'vs last week',
             }}
-            variant="default"
+           
           />
         </div>
 

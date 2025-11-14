@@ -165,7 +165,7 @@ export function BusinessDetailContent({ business }: BusinessDetailContentProps) 
 
             {/* Tabs */}
             <Tabs value={activeTab} onValueChange={setActiveTab}>
-              <TabsList variant="line" className="mb-6">
+              <TabsList className="mb-6">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
                 <TabsTrigger value="reviews">Reviews ({business.reviewCount})</TabsTrigger>
                 <TabsTrigger value="photos">Photos ({photos.length})</TabsTrigger>
@@ -183,7 +183,7 @@ export function BusinessDetailContent({ business }: BusinessDetailContentProps) 
                         </h3>
                         <div className="flex flex-wrap gap-2">
                           {business.amenities.map((amenity: string) => (
-                            <Badge key={amenity} variant="default">
+                            <Badge key={amenity}>
                               {amenity}
                             </Badge>
                           ))}

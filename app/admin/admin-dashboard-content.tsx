@@ -106,7 +106,7 @@ export function AdminDashboardContent({ user }: AdminDashboardContentProps) {
               isPositive: true,
               label: 'vs last month',
             }}
-            variant="default"
+           
           />
           <StatCard
             title="Total Businesses"

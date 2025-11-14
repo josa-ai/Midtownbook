@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {/* Tags */}
               <div className="flex items-center gap-2 mb-6">
                 {post.tags.map((tag) => (
-                  <Badge key={tag} variant="default">
+                  <Badge key={tag}>
                     {tag}
                   </Badge>
                 ))}

@@ -230,7 +230,7 @@ export function ReviewsContent() {
               value: stats.responseRateTrend,
               isPositive: true,
             }}
-            variant="default"
+           
           />
           <StatCard
             title="Helpful Votes"
@@ -240,7 +240,7 @@ export function ReviewsContent() {
               value: stats.helpfulVotesTrend,
               isPositive: true,
             }}
-            variant="default"
+           
           />
         </div>
 
