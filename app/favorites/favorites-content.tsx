@@ -332,18 +332,12 @@ export function FavoritesContent({ user }: FavoritesContentProps) {
                 : 'Start saving businesses you love to easily find them later.'
             }
             action={
-              searchQuery ? (
-                <Button variant="outline" onClick={() => setSearchQuery('')}>
-                  Clear Search
-                </Button>
-              ) : (
-                <Button variant="primary" asChild>
-                  <Link href="/businesses">
-                    Explore Businesses
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              )
+              searchQuery
+                ? {
+                    label: 'Clear Search',
+                    onClick: () => setSearchQuery(''),
+                  }
+                : undefined
             }
           />
         )}

@@ -296,11 +296,6 @@ export function DashboardContent({ user }: DashboardContentProps) {
                       icon={BarChart3}
                       title="Analytics Coming Soon"
                       description="Detailed analytics and insights will be available here"
-                      action={
-                        <Button variant="primary" asChild>
-                          <Link href="/dashboard">Back to Dashboard</Link>
-                        </Button>
-                      }
                     />
                   </TabsContent>
                 </Tabs>

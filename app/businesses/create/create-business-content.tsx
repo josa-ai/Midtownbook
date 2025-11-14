@@ -253,7 +253,7 @@ export function CreateBusinessContent() {
                       accept="image/*"
                       maxFiles={1}
                       maxSize={2 * 1024 * 1024}
-                      onFilesSelected={handleLogoUpload}
+                      onUpload={handleLogoUpload}
                     />
                     {logoImage && (
                       <p className="text-label-sm text-success">Selected: {logoImage.name}</p>
@@ -266,7 +266,7 @@ export function CreateBusinessContent() {
                       accept="image/*"
                       maxFiles={1}
                       maxSize={5 * 1024 * 1024}
-                      onFilesSelected={handleCoverUpload}
+                      onUpload={handleCoverUpload}
                     />
                     {coverImage && (
                       <p className="text-label-sm text-success">Selected: {coverImage.name}</p>

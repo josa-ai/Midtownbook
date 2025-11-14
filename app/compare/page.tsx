@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Header, Footer } from '@/components/layout';
 import { CompareContent } from './compare-content';
 
@@ -12,7 +13,9 @@ export default function ComparePage() {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50">
-        <CompareContent />
+        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+          <CompareContent />
+        </Suspense>
       </main>
       <Footer />
     </>

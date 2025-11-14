@@ -210,7 +210,7 @@ const UploadZone: React.FC<UploadZoneProps> = ({
                 {uploadedFile.error ? (
                   <p className="text-label-sm text-error">{uploadedFile.error}</p>
                 ) : uploadedFile.progress < 100 ? (
-                  <Progress value={uploadedFile.progress} variant="default" size="sm" />
+                  <Progress value={uploadedFile.progress} className="h-2" />
                 ) : (
                   <p className="text-label-sm text-success">Upload complete</p>
                 )}

@@ -1,26 +1,13 @@
-'use client';
-
 import * as React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { Header, Footer } from '@/components/layout';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { BusinessCard } from '@/components/business';
-import { Home, Search, TrendingUp, HelpCircle, MapPin, Calendar, Tag, ArrowRight } from 'lucide-react';
+import { Home, TrendingUp, HelpCircle, MapPin, Calendar, Tag, ArrowRight } from 'lucide-react';
 
 export default function NotFound() {
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = React.useState('');
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/businesses?search=${encodeURIComponent(searchQuery)}`);
-    }
-  };
 
   // Mock popular pages
   const popularPages = [
@@ -102,26 +89,6 @@ export default function NotFound() {
               Try searching for what you need below.
             </p>
 
-            {/* Search Bar */}
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-12">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input
-                  type="text"
-                  placeholder="Search for businesses, categories, or services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 h-14 text-body-md"
-                />
-                <Button
-                  type="submit"
-                  variant="primary"
-                  className="absolute right-2 top-1/2 -translate-y-1/2"
-                >
-                  Search
-                </Button>
-              </div>
-            </form>
 
             {/* Quick Actions */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

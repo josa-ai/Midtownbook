@@ -210,6 +210,10 @@ export function CompareContent() {
         </div>
       );
     }
+    // Handle non-primitive types (objects, arrays)
+    if (typeof value === 'object' && value !== null) {
+      return <span className="text-body-sm">N/A</span>;
+    }
     return <span className="text-body-sm">{value || 'N/A'}</span>;
   };
 
@@ -498,11 +502,6 @@ export function CompareContent() {
             icon={GitCompare}
             title="Select at least 2 businesses to compare"
             description="Choose businesses from the selection above to see a detailed side-by-side comparison."
-            action={
-              <Button variant="primary" asChild>
-                <Link href="/businesses">Browse Businesses</Link>
-              </Button>
-            }
           />
         )}
       </Container>

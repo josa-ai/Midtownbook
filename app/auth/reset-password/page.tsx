@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Header, Footer } from '@/components/layout';
 import { ResetPasswordForm } from './reset-password-form';
 
@@ -12,7 +13,9 @@ export default function ResetPasswordPage() {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50 flex items-center justify-center py-12">
-        <ResetPasswordForm />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ResetPasswordForm />
+        </Suspense>
       </main>
       <Footer />
     </>

@@ -299,7 +299,7 @@ export function CreateDealContent() {
                     accept="image/*"
                     maxFiles={1}
                     maxSize={5 * 1024 * 1024}
-                    onFilesSelected={handleImageUpload}
+                    onUpload={handleImageUpload}
                   />
                   {dealImage && (
                     <p className="text-label-sm text-muted-foreground mt-2">

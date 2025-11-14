@@ -205,11 +205,10 @@ export function BusinessesContent() {
               icon={Search}
               title="No businesses found"
               description="Try adjusting your search or filters"
-              action={
-                <Button variant="primary" onClick={handleClearAll}>
-                  Clear Filters
-                </Button>
-              }
+              action={{
+                label: 'Clear Filters',
+                onClick: handleClearAll,
+              }}
             />
           ) : (
             <div

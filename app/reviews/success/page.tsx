@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Header, Footer } from '@/components/layout';
 import { ReviewSuccessContent } from './review-success-content';
 
@@ -12,7 +13,9 @@ export default function ReviewSuccessPage() {
     <>
       <Header />
       <main className="min-h-screen bg-neutral-50">
-        <ReviewSuccessContent />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ReviewSuccessContent />
+        </Suspense>
       </main>
       <Footer />
     </>

@@ -226,9 +226,9 @@ export function DealsListContent() {
           />
         </div>
 
-        {/* Filters */}
-        <div className="flex items-center justify-between mb-6">
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
+        {/* Filters and Deals List */}
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+          <div className="flex items-center justify-between mb-6">
             <TabsList>
               <TabsTrigger value="all">All ({mockDeals.length})</TabsTrigger>
               <TabsTrigger value="active">
@@ -244,23 +244,22 @@ export function DealsListContent() {
                 Expired ({mockDeals.filter((d) => d.status === 'expired').length})
               </TabsTrigger>
             </TabsList>
-          </Tabs>
 
-          <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-48">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="recent">Most Recent</SelectItem>
-              <SelectItem value="expiring-soon">Expiring Soon</SelectItem>
-              <SelectItem value="redemptions-desc">Most Popular</SelectItem>
-              <SelectItem value="redemptions-asc">Least Popular</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+            <Select value={sortBy} onValueChange={setSortBy}>
+              <SelectTrigger className="w-48">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="recent">Most Recent</SelectItem>
+                <SelectItem value="expiring-soon">Expiring Soon</SelectItem>
+                <SelectItem value="redemptions-desc">Most Popular</SelectItem>
+                <SelectItem value="redemptions-asc">Least Popular</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-        {/* Deals List */}
-        <TabsContent value={activeTab}>
+          {/* Deals List */}
+          <TabsContent value={activeTab}>
           {filteredDeals.length > 0 ? (
             <div className="space-y-6">
               {filteredDeals.map((deal) => {
@@ -394,7 +393,8 @@ export function DealsListContent() {
               </CardContent>
             </Card>
           )}
-        </TabsContent>
+          </TabsContent>
+        </Tabs>
       </Container>
     </div>
   );

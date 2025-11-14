@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Header, Footer } from '@/components/layout';
 import { Container } from '@/components/ui/container';
 import { BusinessCard } from '@/components/business/business-card';
-import { Breadcrumbs } from '@/components/ui/breadcrumbs';
+import { Breadcrumbs, BreadcrumbItem } from '@/components/ui/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft } from 'lucide-react';
 
@@ -87,13 +87,11 @@ export default async function CategoryDetailPage({ params }: { params: Promise<{
         <Container size="xl">
           {/* Breadcrumbs */}
           <div className="mb-6">
-            <Breadcrumbs
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Categories', href: '/categories' },
-                { label: category.name },
-              ]}
-            />
+            <Breadcrumbs>
+              <BreadcrumbItem href="/">Home</BreadcrumbItem>
+              <BreadcrumbItem href="/categories">Categories</BreadcrumbItem>
+              <BreadcrumbItem current>{category.name}</BreadcrumbItem>
+            </Breadcrumbs>
           </div>
 
           {/* Category Header */}

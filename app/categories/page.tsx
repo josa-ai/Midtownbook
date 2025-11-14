@@ -1,13 +1,10 @@
-import { Metadata } from 'next';
+'use client';
+
+import * as React from 'react';
 import { Header, Footer } from '@/components/layout';
 import { Container } from '@/components/ui/container';
 import { CategoryGrid, Category } from '@/components/business/category-grid';
 import { Store, Utensils, Scissors, Wrench, Music, Dumbbell, ShoppingBag, Briefcase } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Browse Categories',
-  description: 'Explore businesses by category in Midtown',
-};
 
 // Mock categories data
 const mockCategories: Category[] = [
@@ -86,6 +83,9 @@ const mockCategories: Category[] = [
 ];
 
 export default function CategoriesPage() {
+  React.useEffect(() => {
+    document.title = 'Browse Categories - Midtown Book';
+  }, []);
   return (
     <>
       <Header />

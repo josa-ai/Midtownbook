@@ -169,29 +169,28 @@ export function ModerationContent() {
           <StatCard title="Total Reports" value={stats.totalReports} icon={MessageSquare} />
         </div>
 
-        {/* Filters */}
-        <div className="flex items-center justify-between mb-6">
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
+        {/* Filters and Content List */}
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+          <div className="flex items-center justify-between mb-6">
             <TabsList>
               <TabsTrigger value="pending">Pending ({stats.pending})</TabsTrigger>
               <TabsTrigger value="approved">Approved ({stats.approved})</TabsTrigger>
               <TabsTrigger value="removed">Removed ({stats.removed})</TabsTrigger>
             </TabsList>
-          </Tabs>
 
-          <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-48">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="recent">Most Recent</SelectItem>
-              <SelectItem value="oldest">Oldest First</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+            <Select value={sortBy} onValueChange={setSortBy}>
+              <SelectTrigger className="w-48">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="recent">Most Recent</SelectItem>
+                <SelectItem value="oldest">Oldest First</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-        {/* Flagged Content List */}
-        <TabsContent value={activeTab}>
+          {/* Flagged Content List */}
+          <TabsContent value={activeTab}>
           <div className="space-y-6">
             {filteredContent.map((item) => (
               <Card key={item.id}>
@@ -336,7 +335,8 @@ export function ModerationContent() {
               </Card>
             )}
           </div>
-        </TabsContent>
+          </TabsContent>
+        </Tabs>
       </Container>
     </div>
   );

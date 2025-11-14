@@ -196,9 +196,9 @@ export function EventsListContent() {
           />
         </div>
 
-        {/* Filters */}
-        <div className="flex items-center justify-between mb-6">
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
+        {/* Filters and Events List */}
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+          <div className="flex items-center justify-between mb-6">
             <TabsList>
               <TabsTrigger value="all">All ({mockEvents.length})</TabsTrigger>
               <TabsTrigger value="published">
@@ -211,23 +211,22 @@ export function EventsListContent() {
                 Cancelled ({mockEvents.filter((e) => e.status === 'cancelled').length})
               </TabsTrigger>
             </TabsList>
-          </Tabs>
 
-          <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-48">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="date-desc">Newest First</SelectItem>
-              <SelectItem value="date-asc">Oldest First</SelectItem>
-              <SelectItem value="attendees-desc">Most Attendees</SelectItem>
-              <SelectItem value="attendees-asc">Least Attendees</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+            <Select value={sortBy} onValueChange={setSortBy}>
+              <SelectTrigger className="w-48">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="date-desc">Newest First</SelectItem>
+                <SelectItem value="date-asc">Oldest First</SelectItem>
+                <SelectItem value="attendees-desc">Most Attendees</SelectItem>
+                <SelectItem value="attendees-asc">Least Attendees</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-        {/* Events List */}
-        <TabsContent value={activeTab}>
+          {/* Events List */}
+          <TabsContent value={activeTab}>
           {filteredEvents.length > 0 ? (
             <div className="space-y-6">
               {filteredEvents.map((event) => (
@@ -347,7 +346,8 @@ export function EventsListContent() {
               </CardContent>
             </Card>
           )}
-        </TabsContent>
+          </TabsContent>
+        </Tabs>
       </Container>
     </div>
   );

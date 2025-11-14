@@ -341,7 +341,7 @@ export function ClaimBusinessForm({ business }: ClaimBusinessFormProps) {
                     accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
                     maxFiles={5}
                     maxSize={10 * 1024 * 1024}
-                    onFilesSelected={handleDocumentsUpload}
+                    onUpload={handleDocumentsUpload}
                   />
                   {documents.length > 0 && (
                     <div className="mt-4">

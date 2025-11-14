@@ -143,7 +143,7 @@ const DealCard: React.FC<DealCardProps> = ({
           {/* Status Badge */}
           {isExpired && (
             <div className="absolute top-4 right-4">
-              <Badge variant="default">Expired</Badge>
+              <Badge variant="error">Expired</Badge>
             </div>
           )}
           {!isExpired && daysLeft <= 3 && (

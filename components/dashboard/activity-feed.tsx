@@ -22,7 +22,7 @@ interface Activity {
   iconColor?: string;
   badge?: {
     text: string;
-    variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
+    variant?: 'primary' | 'secondary' | 'accent' | 'success' | 'warning' | 'error' | 'info' | 'outline' | 'ghost';
   };
   link?: string;
 }
