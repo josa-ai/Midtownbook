@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Can I try before I commit?',
     answer:
-      'Absolutely! Every plan includes a 14-day free trial with full access to all features. No credit card required to start. Plus, we offer a 30-day money-back guarantee on all paid plans—if you're not satisfied, we'll refund your payment, no questions asked.',
+      'Absolutely! Every plan includes a 14-day free trial with full access to all features. No credit card required to start. Plus, we offer a 30-day money-back guarantee on all paid plans--if you're not satisfied, we'll refund your payment, no questions asked.',
   },
   {
     question: 'How do verified reviews work?',
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: 'Is there a long-term contract?',
     answer:
-      'No long-term contracts required! All plans are month-to-month, and you can cancel anytime. Annual plans offer significant savings (equivalent to 3 months free) but are also flexible—we'll prorate any unused time if you need to cancel.',
+      'No long-term contracts required! All plans are month-to-month, and you can cancel anytime. Annual plans offer significant savings (equivalent to 3 months free) but are also flexible--we'll prorate any unused time if you need to cancel.',
   },
   {
     question: 'What kind of analytics do I get?',
