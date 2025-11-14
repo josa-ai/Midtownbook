@@ -9,54 +9,54 @@ import { cn } from '@/lib/utils';
 
 const faqs = [
   {
-    question: 'How quickly can I get my business listed?',
+    question: "How quickly can I get my business listed?",
     answer:
-      'Your business can be live within 24 hours! Simply sign up, complete your profile with photos and details, and our team will verify and publish your listing. Premium plans get priority review and can be live in as little as 2 hours.',
+      "Your business can be live within 24 hours! Simply sign up, complete your profile with photos and details, and our team will verify and publish your listing. Premium plans get priority review and can be live in as little as 2 hours.",
   },
   {
-    question: 'What makes Midtown Book different from other directories?',
+    question: "What makes Midtown Book different from other directories?",
     answer:
       "We're hyper-focused on local community engagement. Unlike generic directories, we only feature businesses in Midtown, creating a trusted local network. Our verified review system, featured placements, and direct customer engagement tools are specifically designed to help neighborhood businesses thrive.",
   },
   {
-    question: 'Can I try before I commit?',
+    question: "Can I try before I commit?",
     answer:
-      'Absolutely! Every plan includes a 14-day free trial with full access to all features. No credit card required to start. Plus, we offer a 30-day money-back guarantee on all paid plans--if you're not satisfied, we'll refund your payment, no questions asked.',
+      "Absolutely! Every plan includes a 14-day free trial with full access to all features. No credit card required to start. Plus, we offer a 30-day money-back guarantee on all paid plans--if you're not satisfied, we'll refund your payment, no questions asked.",
   },
   {
-    question: 'How do verified reviews work?',
+    question: "How do verified reviews work?",
     answer:
-      'We verify reviews through multiple checks: email confirmation, purchase verification (when available), and AI-powered fraud detection. Only real customers can leave reviews, and we moderate all content to prevent spam and ensure authenticity. This builds trust with potential customers.',
+      "We verify reviews through multiple checks: email confirmation, purchase verification (when available), and AI-powered fraud detection. Only real customers can leave reviews, and we moderate all content to prevent spam and ensure authenticity. This builds trust with potential customers.",
   },
   {
-    question: 'Can I update my listing anytime?',
+    question: "Can I update my listing anytime?",
     answer:
-      'Yes! You have 24/7 access to your dashboard where you can update your hours, photos, services, special offers, and more. Changes are reflected on your listing immediately. You can also respond to reviews and post updates to keep your community engaged.',
+      "Yes! You have 24/7 access to your dashboard where you can update your hours, photos, services, special offers, and more. Changes are reflected on your listing immediately. You can also respond to reviews and post updates to keep your community engaged.",
   },
   {
-    question: 'What if I have multiple locations?',
+    question: "What if I have multiple locations?",
     answer:
-      'Our Enterprise plan is perfect for multi-location businesses. You can manage all locations from one dashboard, with individual listings for each location. We also offer volume discounts for 3+ locations. Contact our sales team for custom pricing.',
+      "Our Enterprise plan is perfect for multi-location businesses. You can manage all locations from one dashboard, with individual listings for each location. We also offer volume discounts for 3+ locations. Contact our sales team for custom pricing.",
   },
   {
-    question: 'How does the featured placement work?',
+    question: "How does the featured placement work?",
     answer:
-      'Featured placements appear at the top of category searches and on the homepage. They receive 3x more views on average. With Professional and Enterprise plans, you can choose your featured category and time slots to maximize visibility during your peak hours.',
+      "Featured placements appear at the top of category searches and on the homepage. They receive 3x more views on average. With Professional and Enterprise plans, you can choose your featured category and time slots to maximize visibility during your peak hours.",
   },
   {
-    question: 'Do you offer any promotional support?',
+    question: "Do you offer any promotional support?",
     answer:
-      'Yes! All paid plans include access to our deals platform where you can post special offers. We also feature select businesses in our monthly newsletter (10,000+ subscribers), social media highlights, and seasonal promotion campaigns at no extra cost.',
+      "Yes! All paid plans include access to our deals platform where you can post special offers. We also feature select businesses in our monthly newsletter (10,000+ subscribers), social media highlights, and seasonal promotion campaigns at no extra cost.",
   },
   {
-    question: 'Is there a long-term contract?',
+    question: "Is there a long-term contract?",
     answer:
-      'No long-term contracts required! All plans are month-to-month, and you can cancel anytime. Annual plans offer significant savings (equivalent to 3 months free) but are also flexible--we'll prorate any unused time if you need to cancel.',
+      "No long-term contracts required! All plans are month-to-month, and you can cancel anytime. Annual plans offer significant savings (equivalent to 3 months free) but are also flexible--we'll prorate any unused time if you need to cancel.",
   },
   {
-    question: 'What kind of analytics do I get?',
+    question: "What kind of analytics do I get?",
     answer:
-      'Your dashboard includes detailed analytics: profile views, click-through rates, customer demographics, search keywords, peak engagement times, review sentiment analysis, and competitor benchmarking. Professional and Enterprise plans get advanced reporting and export capabilities.',
+      "Your dashboard includes detailed analytics: profile views, click-through rates, customer demographics, search keywords, peak engagement times, review sentiment analysis, and competitor benchmarking. Professional and Enterprise plans get advanced reporting and export capabilities.",
   },
 ];
 

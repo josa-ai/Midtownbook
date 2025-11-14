@@ -131,7 +131,7 @@ export function PricingSection() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge variant="default" size="lg" className="shadow-md">
+                    <Badge variant="primary" size="lg" className="shadow-md">
                       <Star className="h-4 w-4 mr-1 fill-current" />
                       Most Popular
                     </Badge>
@@ -189,7 +189,7 @@ export function PricingSection() {
                 <CardFooter>
                   <Button
                     size="lg"
-                    variant={plan.popular ? 'default' : 'outline'}
+                    variant={plan.popular ? 'primary' : 'outline'}
                     className="w-full"
                     asChild
                   >
