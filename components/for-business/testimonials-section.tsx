@@ -42,7 +42,7 @@ const testimonials = [
   {
     name: 'David Thompson',
     role: 'Owner',
-    business: 'Thompson's Hardware',
+    business: 'Thompson Hardware',
     image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=david',
     quote:
       "As a 3rd generation family business, adapting to online marketing was intimidating. Midtown Book made it simple, and our sales increased 35% in the first quarter.",
