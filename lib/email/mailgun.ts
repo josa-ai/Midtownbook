@@ -46,7 +46,7 @@ export async function sendEmail(options: EmailOptions) {
   }
 
   try {
-    const message = {
+    const message: any = {
       from: options.from || FROM_EMAIL,
       to: Array.isArray(options.to) ? options.to.join(', ') : options.to,
       subject: options.subject,
