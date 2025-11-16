@@ -11,3 +11,4 @@ export * from './photo-gallery';
 export * from './deal-card';
 export * from './category-grid';
 export * from './map-view';
+export * from './write-review-dialog';

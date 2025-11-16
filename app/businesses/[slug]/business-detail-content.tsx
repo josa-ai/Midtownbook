@@ -15,6 +15,7 @@ import { PhotoGallery, Photo } from '@/components/business/photo-gallery';
 import { ReviewCard } from '@/components/business/review-card';
 import { MapView } from '@/components/business/map-view';
 import { BusinessCard } from '@/components/business/business-card';
+import { WriteReviewDialog } from '@/components/business/write-review-dialog';
 import { cn } from '@/lib/utils';
 import { BusinessWithDetails } from '@/lib/data/businesses';
 
@@ -312,7 +313,11 @@ export function BusinessDetailContent({
                     <h3 className="font-serif font-semibold text-heading-sm">
                       Customer Reviews
                     </h3>
-                    <Button variant="primary">Write a Review</Button>
+                    <WriteReviewDialog
+                      businessId={business.id}
+                      businessName={business.name}
+                      businessSlug={business.slug}
+                    />
                   </div>
 
                   {reviews.length === 0 ? (
@@ -321,7 +326,13 @@ export function BusinessDetailContent({
                         <p className="text-muted-foreground mb-4">
                           No reviews yet. Be the first to review!
                         </p>
-                        <Button variant="primary">Write the First Review</Button>
+                        <WriteReviewDialog
+                          businessId={business.id}
+                          businessName={business.name}
+                          businessSlug={business.slug}
+                        >
+                          <Button variant="primary">Write the First Review</Button>
+                        </WriteReviewDialog>
                       </CardContent>
                     </Card>
                   ) : (
