@@ -12,7 +12,7 @@
     "test:design:headed": "playwright test tests/design-system.spec.js --headed"
   },
   "dependencies": {
-    "@googlemaps/js-api-loader": "^1.16.8",
+    "@googlemaps/js-api-loader": "^1.16.10",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -61,6 +61,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
+    "@types/google.maps": "^3.58.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
