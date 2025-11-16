@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { MapPin, Clock, Star, Ticket, TrendingUp, ExternalLink } from 'lucide-react';
 import { JsonLdScript } from '@/components/seo/json-ld-script';
 import { generateBonnetSpringsParkSchema, generateBreadcrumbSchema } from '@/lib/seo/json-ld';
+import { AttractionViewTracker } from '@/components/analytics/attraction-view-tracker';
 
 export const metadata: Metadata = {
   title: 'Bonnet Springs Park | USA Today\'s #1 City Park in America',
@@ -36,6 +37,7 @@ export default function BonnetSpringsParkPage() {
 
   return (
     <>
+      <AttractionViewTracker attraction="bonnet_springs_park" />
       <JsonLdScript
         data={[
           generateBonnetSpringsParkSchema(),
