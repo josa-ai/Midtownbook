@@ -29,6 +29,11 @@ interface BusinessCardProps {
     isOpen?: boolean;
     nextOpenTime?: string;
     isFeatured?: boolean;
+    // Mid-Town positioning
+    isParkAdjacent?: boolean;
+    isGameDayVenue?: boolean;
+    distanceToPark?: number;
+    distanceToStadium?: number;
   };
   variant?: 'grid' | 'list' | 'compact';
   showActions?: boolean;
@@ -74,15 +79,25 @@ const BusinessCard: React.FC<BusinessCardProps> = ({
               </div>
             )}
 
-            {/* Featured Badge */}
-            {business.isFeatured && (
-              <div className="absolute top-3 left-3">
+            {/* Badges */}
+            <div className="absolute top-3 left-3 flex flex-col gap-2">
+              {business.isFeatured && (
                 <Badge variant="accent" className="shadow-md">
                   <Star className="h-3 w-3 fill-current" />
                   Featured
                 </Badge>
-              </div>
-            )}
+              )}
+              {business.isParkAdjacent && (
+                <Badge variant="success" className="shadow-md">
+                  Near Park
+                </Badge>
+              )}
+              {business.isGameDayVenue && (
+                <Badge variant="primary" className="shadow-md">
+                  Game Day
+                </Badge>
+              )}
+            </div>
 
             {/* Favorite Button */}
             {showActions && onFavorite && (
@@ -216,10 +231,27 @@ const BusinessCard: React.FC<BusinessCardProps> = ({
                         Featured
                       </Badge>
                     )}
+                    {business.isParkAdjacent && (
+                      <Badge variant="success" size="sm">
+                        Near Park
+                      </Badge>
+                    )}
+                    {business.isGameDayVenue && (
+                      <Badge variant="primary" size="sm">
+                        Game Day
+                      </Badge>
+                    )}
                   </div>
-                  <Badge variant="outline" size="sm" className="mb-2">
-                    {business.category}
-                  </Badge>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge variant="outline" size="sm">
+                      {business.category}
+                    </Badge>
+                    {business.distanceToPark && (
+                      <span className="text-label-sm text-muted-foreground">
+                        {business.distanceToPark.toFixed(1)} mi to park
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 {showActions && onFavorite && (

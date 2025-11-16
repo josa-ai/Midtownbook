@@ -170,6 +170,21 @@ export function BusinessDetailContent({
                             Featured
                           </Badge>
                         )}
+                        {business.is_park_adjacent && (
+                          <Badge variant="success" size="sm">
+                            Near Park
+                          </Badge>
+                        )}
+                        {business.is_game_day_venue && (
+                          <Badge variant="primary" size="sm">
+                            Game Day Venue
+                          </Badge>
+                        )}
+                        {business.memorial_boulevard_location && (
+                          <Badge variant="outline" size="sm">
+                            Memorial Blvd
+                          </Badge>
+                        )}
                         {business.price_range && (
                           <span className="text-label-sm font-medium text-neutral-600">
                             {'$'.repeat(business.price_range)}
@@ -245,9 +260,11 @@ export function BusinessDetailContent({
                             lat: business.latitude,
                             lng: business.longitude,
                             title: business.name,
+                            description: business.description || undefined,
                           },
                         ]}
                         height={300}
+                        showMidtownLandmarks
                       />
                       <p className="mt-3 text-body-sm text-muted-foreground flex items-start gap-2">
                         <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
@@ -424,6 +441,59 @@ export function BusinessDetailContent({
                           <span className="font-medium">{time as string}</span>
                         </div>
                       ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Mid-Town Location Card */}
+              {(business.distance_to_bonnet_springs || business.distance_to_tigers_stadium) && (
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-serif font-semibold text-heading-sm mb-4">
+                      Mid-Town Location
+                    </h3>
+                    <div className="space-y-3">
+                      {business.distance_to_bonnet_springs && (
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-success-100 flex items-center justify-center">
+                            <MapPin className="h-5 w-5 text-success-600" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="text-label-sm text-muted-foreground">Bonnet Springs Park</div>
+                            <div className="text-body-sm font-medium">
+                              {business.distance_to_bonnet_springs.toFixed(1)} miles away
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      {business.distance_to_tigers_stadium && (
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
+                            <MapPin className="h-5 w-5 text-primary-600" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="text-label-sm text-muted-foreground">Tigers Stadium</div>
+                            <div className="text-body-sm font-medium">
+                              {business.distance_to_tigers_stadium.toFixed(1)} miles away
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      {business.is_park_adjacent && (
+                        <div className="mt-3 p-3 bg-success-50 rounded-lg border border-success-200">
+                          <p className="text-label-sm text-success-700 font-medium">
+                            🌳 Perfect stop before or after visiting the park!
+                          </p>
+                        </div>
+                      )}
+                      {business.is_game_day_venue && (
+                        <div className="mt-3 p-3 bg-primary-50 rounded-lg border border-primary-200">
+                          <p className="text-label-sm text-primary-700 font-medium">
+                            ⚾ Great spot for Tigers game day!
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

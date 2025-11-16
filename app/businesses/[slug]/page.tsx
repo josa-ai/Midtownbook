@@ -26,9 +26,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  // Build Mid-Town positioning description
+  const midtownContext = [];
+  if (business.is_park_adjacent) {
+    midtownContext.push('near Bonnet Springs Park');
+  }
+  if (business.is_game_day_venue) {
+    midtownContext.push('near Tigers Stadium');
+  }
+  if (business.memorial_boulevard_location) {
+    midtownContext.push('on Memorial Boulevard');
+  }
+  const locationSuffix = midtownContext.length > 0
+    ? ` Located ${midtownContext.join(', ')} in Mid-Town Lakeland.`
+    : ` Located in Mid-Town Lakeland.`;
+
   return {
-    title: `${business.name} | Midtownbook`,
-    description: business.description || `Visit ${business.name} in ${business.city}. ${business.category.name}`,
+    title: `${business.name} | Mid-Town Lakeland ${business.category.name}`,
+    description: (business.description || `Visit ${business.name} in ${business.city}. ${business.category.name}`) + locationSuffix,
     openGraph: {
       title: business.name,
       description: business.description || undefined,

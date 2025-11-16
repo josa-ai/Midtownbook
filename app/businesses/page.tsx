@@ -7,8 +7,17 @@ import { getBusinesses } from '@/lib/data/businesses';
 import { getCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Browse Businesses',
-  description: 'Discover local businesses in Midtown. Search, filter, and find the perfect business for your needs.',
+  title: 'Mid-Town Lakeland Businesses | Near Bonnet Springs Park & Tigers Stadium',
+  description: 'Discover Mid-Town Lakeland businesses near Bonnet Springs Park (USA Today\'s #1 City Park) and Detroit Tigers Spring Training. Find restaurants, shops, and services on Memorial Boulevard.',
+  keywords: [
+    'Mid-Town Lakeland businesses',
+    'Bonnet Springs Park restaurants',
+    'Tigers Stadium dining',
+    'Memorial Boulevard shops',
+    'Lakeland local businesses',
+    'near Bonnet Springs Park',
+    'game day dining Lakeland',
+  ],
 };
 
 export default async function BusinessesPage() {

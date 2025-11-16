@@ -30,7 +30,7 @@ export function BusinessesContent({
   const [selectedFilters, setSelectedFilters] = React.useState<Record<string, string[]>>({});
   const [viewMode, setViewMode] = React.useState<'grid' | 'list'>('grid');
   const [isLoading, setIsLoading] = React.useState(false);
-  const [sortBy, setSortBy] = React.useState<'name' | 'rating' | 'created_at' | 'view_count'>('created_at');
+  const [sortBy, setSortBy] = React.useState<'name' | 'rating' | 'created_at' | 'view_count' | 'distance_to_park' | 'distance_to_stadium'>('created_at');
   const [currentPage, setCurrentPage] = React.useState(1);
   const itemsPerPage = 12;
 
@@ -68,6 +68,17 @@ export function BusinessesContent({
       // Apply featured filter
       if (selectedFilters.features?.includes('featured')) {
         params.set('isFeatured', 'true');
+      }
+
+      // Apply Mid-Town location filters
+      if (selectedFilters.midtown_location?.includes('park_adjacent')) {
+        params.set('isParkAdjacent', 'true');
+      }
+      if (selectedFilters.midtown_location?.includes('game_day_venue')) {
+        params.set('isGameDayVenue', 'true');
+      }
+      if (selectedFilters.midtown_location?.includes('memorial_boulevard')) {
+        params.set('memorialBoulevard', 'true');
       }
 
       // Fetch from API route
@@ -131,6 +142,18 @@ export function BusinessesContent({
         { id: '2', label: '$$' },
         { id: '3', label: '$$$' },
         { id: '4', label: '$$$$' },
+      ],
+    });
+
+    // Mid-Town Location filter
+    groups.push({
+      id: 'midtown_location',
+      label: 'Mid-Town Location',
+      type: 'checkbox',
+      options: [
+        { id: 'park_adjacent', label: 'Near Bonnet Springs Park' },
+        { id: 'game_day_venue', label: 'Near Tigers Stadium' },
+        { id: 'memorial_boulevard', label: 'Memorial Boulevard' },
       ],
     });
 
@@ -263,6 +286,20 @@ export function BusinessesContent({
           >
             Popular
           </Button>
+          <Button
+            variant={sortBy === 'distance_to_park' ? 'primary' : 'ghost'}
+            size="sm"
+            onClick={() => setSortBy('distance_to_park')}
+          >
+            Near Park
+          </Button>
+          <Button
+            variant={sortBy === 'distance_to_stadium' ? 'primary' : 'ghost'}
+            size="sm"
+            onClick={() => setSortBy('distance_to_stadium')}
+          >
+            Near Stadium
+          </Button>
         </div>
       </div>
 
@@ -325,6 +362,11 @@ export function BusinessesContent({
                       phone: business.phone || undefined,
                       priceRange: business.price_range || undefined,
                       isFeatured: business.is_featured,
+                      // Mid-Town positioning
+                      isParkAdjacent: business.is_park_adjacent || false,
+                      isGameDayVenue: business.is_game_day_venue || false,
+                      distanceToPark: business.distance_to_bonnet_springs || undefined,
+                      distanceToStadium: business.distance_to_tigers_stadium || undefined,
                     }}
                     variant={viewMode === 'grid' ? 'grid' : 'list'}
                     showActions
