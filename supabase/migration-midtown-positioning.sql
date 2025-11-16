@@ -9,8 +9,8 @@
 
 -- Add Mid-Town specific fields to businesses table
 alter table public.businesses
-  add column if not exists distance_to_bonnet_springs decimal(5, 2),
-  add column if not exists distance_to_tigers_stadium decimal(5, 2),
+  add column if not exists distance_to_bonnet_springs decimal(10, 2),
+  add column if not exists distance_to_tigers_stadium decimal(10, 2),
   add column if not exists is_park_adjacent boolean default false not null,
   add column if not exists is_game_day_venue boolean default false not null,
   add column if not exists memorial_boulevard_location boolean default false not null,
