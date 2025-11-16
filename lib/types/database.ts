@@ -74,6 +74,13 @@ export interface Database {
           subscription_expires_at: string | null;
           view_count: number;
           claim_status: 'unclaimed' | 'pending' | 'claimed';
+          // Mid-Town Lakeland positioning fields
+          distance_to_bonnet_springs: number | null;
+          distance_to_tigers_stadium: number | null;
+          is_park_adjacent: boolean;
+          is_game_day_venue: boolean;
+          memorial_boulevard_location: boolean;
+          business_tags: string[];
           created_at: string;
           updated_at: string;
         };
@@ -107,6 +114,13 @@ export interface Database {
           subscription_expires_at?: string | null;
           view_count?: number;
           claim_status?: 'unclaimed' | 'pending' | 'claimed';
+          // Mid-Town Lakeland positioning fields
+          distance_to_bonnet_springs?: number | null;
+          distance_to_tigers_stadium?: number | null;
+          is_park_adjacent?: boolean;
+          is_game_day_venue?: boolean;
+          memorial_boulevard_location?: boolean;
+          business_tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
@@ -140,6 +154,13 @@ export interface Database {
           subscription_expires_at?: string | null;
           view_count?: number;
           claim_status?: 'unclaimed' | 'pending' | 'claimed';
+          // Mid-Town Lakeland positioning fields
+          distance_to_bonnet_springs?: number | null;
+          distance_to_tigers_stadium?: number | null;
+          is_park_adjacent?: boolean;
+          is_game_day_venue?: boolean;
+          memorial_boulevard_location?: boolean;
+          business_tags?: string[];
           created_at?: string;
           updated_at?: string;
         };
@@ -242,6 +263,10 @@ export interface Database {
           price: number | null;
           max_attendees: number | null;
           is_active: boolean;
+          // Mid-Town Lakeland event fields
+          event_type: 'general' | 'park_event' | 'tigers_game' | 'memorial_boulevard_event' | 'neighborhood_activity';
+          is_featured_event: boolean;
+          related_attraction: 'bonnet_springs_park' | 'tigers_stadium' | 'memorial_boulevard' | null;
           created_at: string;
           updated_at: string;
         };
@@ -260,6 +285,10 @@ export interface Database {
           price?: number | null;
           max_attendees?: number | null;
           is_active?: boolean;
+          // Mid-Town Lakeland event fields
+          event_type?: 'general' | 'park_event' | 'tigers_game' | 'memorial_boulevard_event' | 'neighborhood_activity';
+          is_featured_event?: boolean;
+          related_attraction?: 'bonnet_springs_park' | 'tigers_stadium' | 'memorial_boulevard' | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -278,6 +307,10 @@ export interface Database {
           price?: number | null;
           max_attendees?: number | null;
           is_active?: boolean;
+          // Mid-Town Lakeland event fields
+          event_type?: 'general' | 'park_event' | 'tigers_game' | 'memorial_boulevard_event' | 'neighborhood_activity';
+          is_featured_event?: boolean;
+          related_attraction?: 'bonnet_springs_park' | 'tigers_stadium' | 'memorial_boulevard' | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -296,6 +329,10 @@ export interface Database {
           end_date: string;
           is_active: boolean;
           redemption_count: number;
+          // Mid-Town Lakeland deal fields
+          deal_category: 'standard' | 'show_your_ticket' | 'park_visitor' | 'game_day' | 'memorial_boulevard_special';
+          requires_proof: boolean;
+          proof_type: 'park_receipt' | 'park_ticket' | 'game_ticket' | 'parking_receipt' | null;
           created_at: string;
           updated_at: string;
         };
@@ -312,6 +349,10 @@ export interface Database {
           end_date: string;
           is_active?: boolean;
           redemption_count?: number;
+          // Mid-Town Lakeland deal fields
+          deal_category?: 'standard' | 'show_your_ticket' | 'park_visitor' | 'game_day' | 'memorial_boulevard_special';
+          requires_proof?: boolean;
+          proof_type?: 'park_receipt' | 'park_ticket' | 'game_ticket' | 'parking_receipt' | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -328,6 +369,10 @@ export interface Database {
           end_date?: string;
           is_active?: boolean;
           redemption_count?: number;
+          // Mid-Town Lakeland deal fields
+          deal_category?: 'standard' | 'show_your_ticket' | 'park_visitor' | 'game_day' | 'memorial_boulevard_special';
+          requires_proof?: boolean;
+          proof_type?: 'park_receipt' | 'park_ticket' | 'game_ticket' | 'parking_receipt' | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -344,6 +389,10 @@ export interface Database {
       subscription_tier: 'free' | 'basic' | 'premium' | 'featured';
       claim_status: 'unclaimed' | 'pending' | 'claimed';
       discount_type: 'percentage' | 'fixed' | 'bogo' | 'other';
+      deal_category: 'standard' | 'show_your_ticket' | 'park_visitor' | 'game_day' | 'memorial_boulevard_special';
+      proof_type: 'park_receipt' | 'park_ticket' | 'game_ticket' | 'parking_receipt';
+      event_type: 'general' | 'park_event' | 'tigers_game' | 'memorial_boulevard_event' | 'neighborhood_activity';
+      attraction_type: 'bonnet_springs_park' | 'tigers_stadium' | 'memorial_boulevard';
     };
   };
 }

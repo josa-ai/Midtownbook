@@ -5,6 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { MapPin, Clock, Star, Ticket, TrendingUp, ExternalLink } from 'lucide-react';
+import { JsonLdScript } from '@/components/seo/json-ld-script';
+import { generateBonnetSpringsParkSchema, generateBreadcrumbSchema } from '@/lib/seo/json-ld';
 
 export const metadata: Metadata = {
   title: 'Bonnet Springs Park | USA Today\'s #1 City Park in America',
@@ -27,8 +29,19 @@ export const metadata: Metadata = {
 };
 
 export default function BonnetSpringsParkPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Bonnet Springs Park', url: '/attractions/bonnet-springs-park' },
+  ];
+
   return (
     <>
+      <JsonLdScript
+        data={[
+          generateBonnetSpringsParkSchema(),
+          generateBreadcrumbSchema(breadcrumbs),
+        ]}
+      />
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
