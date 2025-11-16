@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
+import { Suspense } from 'react';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { GoogleAnalytics, AnalyticsProvider } from '@/components/analytics';
@@ -98,7 +99,9 @@ export default function RootLayout({
           playfair.variable
         )}
       >
-        <AnalyticsProvider>{children}</AnalyticsProvider>
+        <Suspense fallback={null}>
+          <AnalyticsProvider>{children}</AnalyticsProvider>
+        </Suspense>
       </body>
     </html>
   );
