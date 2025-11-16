@@ -63,17 +63,41 @@ export function ClaimBusinessForm({ business }: ClaimBusinessFormProps) {
     setIsLoading(true);
 
     try {
-      // TODO: Implement Supabase claim submission
-      // 1. Upload verification documents to Supabase Storage
-      // 2. Create claim request record
-      // 3. Send notification emails
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Prepare form data
+      const submitData = new FormData();
+      submitData.append('businessId', business.id);
+      submitData.append('fullName', formData.fullName);
+      submitData.append('email', formData.email);
+      submitData.append('phone', formData.phone);
+      submitData.append('position', formData.position);
+      submitData.append('relationship', formData.relationship);
+      submitData.append('additionalInfo', formData.additionalInfo);
+
+      // Append documents
+      documents.forEach((doc) => {
+        submitData.append('documents', doc);
+      });
+
+      // Submit to API
+      const response = await fetch('/api/businesses/claim', {
+        method: 'POST',
+        body: submitData,
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to submit claim');
+      }
 
       // Redirect to success page
       router.push(`/businesses/${business.slug}/claim/success`);
     } catch (error) {
       console.error('Error submitting claim:', error);
-      alert('Failed to submit claim. Please try again.');
+      alert(
+        error instanceof Error
+          ? error.message
+          : 'Failed to submit claim. Please try again.'
+      );
     } finally {
       setIsLoading(false);
     }
