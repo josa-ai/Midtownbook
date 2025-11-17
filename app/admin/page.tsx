@@ -1,30 +1,23 @@
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
 import { Header } from '@/components/layout';
 import { AdminDashboardContent } from './admin-dashboard-content';
+import { requireAdmin } from '@/lib/auth/admin';
 
 export const metadata: Metadata = {
   title: 'Admin Dashboard',
   description: 'Manage users, businesses, and content',
 };
 
-// Mock admin check - replace with actual Supabase auth
-async function getCurrentUser() {
-  // TODO: Implement Supabase auth check with admin role verification
-  return {
-    id: 'admin-1',
-    email: 'admin@midtownbook.com',
-    name: 'Admin User',
-    role: 'admin',
-  };
-}
-
 export default async function AdminDashboardPage() {
-  const user = await getCurrentUser();
+  // Require admin authentication - will redirect if not authorized
+  const admin = await requireAdmin();
 
-  if (!user || user.role !== 'admin') {
-    redirect('/');
-  }
+  const user = {
+    id: admin.id,
+    email: admin.email,
+    name: admin.full_name || admin.email,
+    role: admin.role,
+  };
 
   return (
     <>

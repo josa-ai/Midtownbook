@@ -68,11 +68,24 @@ export async function updateSession(request: NextRequest) {
 
   // Admin-only routes
   if (request.nextUrl.pathname.startsWith('/admin')) {
-    // TODO: Add role check from profiles table
-    // For now, just check if user is authenticated
     if (!user) {
       const url = request.nextUrl.clone();
       url.pathname = '/auth/login';
+      url.searchParams.set('redirect', request.nextUrl.pathname);
+      return NextResponse.redirect(url);
+    }
+
+    // Check admin role from profiles table
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('role, status')
+      .eq('id', user.id)
+      .single();
+
+    if (!profile || profile.role !== 'admin' || profile.status === 'suspended') {
+      const url = request.nextUrl.clone();
+      url.pathname = '/';
+      url.searchParams.set('error', 'unauthorized');
       return NextResponse.redirect(url);
     }
   }

@@ -1,18 +1,7 @@
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
 import { Header } from '@/components/layout';
 import { BusinessesManagementContent } from './businesses-management-content';
-
-async function getCurrentUser() {
-  // TODO: Implement Supabase auth check
-  // Mock user data
-  return {
-    id: 'admin-1',
-    email: 'admin@midtownbook.com',
-    name: 'Admin User',
-    role: 'admin',
-  };
-}
+import { requireAdmin } from '@/lib/auth/admin';
 
 export const metadata: Metadata = {
   title: 'Business Management',
@@ -20,11 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default async function BusinessesManagementPage() {
-  const user = await getCurrentUser();
-
-  if (!user || user.role !== 'admin') {
-    redirect('/');
-  }
+  // Require admin authentication
+  await requireAdmin();
 
   return (
     <>
