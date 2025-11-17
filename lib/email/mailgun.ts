@@ -6,16 +6,27 @@
 import formData from 'form-data';
 import Mailgun from 'mailgun.js';
 
-const mailgun = new Mailgun(formData);
-
-// Initialize Mailgun client
-const mg = mailgun.client({
-  username: 'api',
-  key: process.env.MAILGUN_API_KEY || '',
-});
-
 const MAILGUN_DOMAIN = process.env.MAILGUN_DOMAIN || '';
 const FROM_EMAIL = process.env.MAILGUN_FROM_EMAIL || 'noreply@midtownbook.com';
+
+// Lazy initialization of Mailgun client to avoid build errors when API key is missing
+let mg: ReturnType<Mailgun['client']> | null = null;
+
+function getMailgunClient() {
+  if (!process.env.MAILGUN_API_KEY) {
+    return null;
+  }
+
+  if (!mg) {
+    const mailgun = new Mailgun(formData);
+    mg = mailgun.client({
+      username: 'api',
+      key: process.env.MAILGUN_API_KEY,
+    });
+  }
+
+  return mg;
+}
 
 export interface EmailOptions {
   to: string | string[];
@@ -35,7 +46,9 @@ export interface EmailOptions {
  * Send an email via Mailgun
  */
 export async function sendEmail(options: EmailOptions) {
-  if (!process.env.MAILGUN_API_KEY) {
+  const client = getMailgunClient();
+
+  if (!client) {
     console.warn('Mailgun API key not configured. Email not sent:', options.subject);
     return null;
   }
@@ -57,7 +70,7 @@ export async function sendEmail(options: EmailOptions) {
       ...(options.attachments && { attachment: options.attachments }),
     };
 
-    const response = await mg.messages.create(MAILGUN_DOMAIN, message);
+    const response = await client.messages.create(MAILGUN_DOMAIN, message);
     console.log('Email sent successfully:', response.id);
     return response;
   } catch (error) {
